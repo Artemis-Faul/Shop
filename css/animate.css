@@ -1,0 +1,100 @@
+/* ANIMATION */
+@keyframes updown {
+  from {
+    top: 207px;
+  }
+
+  to {
+    top: 187px;
+  }
+}
+
+@keyframes updownone {
+  from {
+    top: 394px;
+  }
+
+  to {
+    top: 374px;
+  }
+}
+
+@keyframes updown1600 {
+  from {
+    top: 207px;
+  }
+
+  to {
+    top: 187px;
+  }
+}
+
+@keyframes updownone1600 {
+  from {
+    top: 370px;
+  }
+
+  to {
+    top: 350px;
+  }
+}
+
+@keyframes updown1536 {
+  from {
+    top: 207px;
+  }
+
+  to {
+    top: 187px;
+  }
+}
+
+@keyframes updownone1536 {
+  from {
+    top: 306px;
+  }
+
+  to {
+    top: 286px;
+  }
+}
+
+@keyframes updown1400 {
+  from {
+    top: 291px;
+  }
+
+  to {
+    top: 271px;
+  }
+}
+
+@keyframes updownone1400 {
+  0% {
+    top: 385px;
+  }
+
+  100% {
+    top: 365px;
+  }
+}
+
+@keyframes updown1366 {
+  from {
+    top: 240px;
+  }
+
+  to {
+    top: 220px;
+  }
+}
+
+@keyframes updownone1366 {
+  0% {
+    top: 320px;
+  }
+
+  100% {
+    top: 300px;
+  }
+}
