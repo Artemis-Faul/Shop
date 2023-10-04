@@ -1,0 +1,13 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Warning / Shield_Check">
+<g id="Sent">
+<path id="Vector" d="M30.7241 41.3766L11.2779 39.7898C9.75333 39.4164 9.53553 37.4251 10.9357 36.7717L66.6606 12.1607C68.1229 11.5073 69.6475 12.9696 68.9319 14.3386L42.7029 67.1077C41.9873 68.4456 39.9338 68.2278 39.5604 66.7966L36.9779 42.2167L59.5978 21.0592" stroke="url(#paint0_linear_1_461)" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1_461" x1="8.24196" y1="23.2" x2="61.7611" y2="63.9109" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CE2574"/>
+<stop offset="1" stop-color="#1C259B"/>
+</linearGradient>
+</defs>
+</svg>

@@ -15,7 +15,7 @@
 .uptitle__img {
   max-width: 1171px;
   position: absolute;
-  left: 0;
+  left: -10px;
 }
 
 .uptitle__right {
@@ -42,7 +42,6 @@
 
 @media (max-width: 1600px) {
   .uptitle__img {
-    left: -10px;
     max-width: 65.5%;
   }
 

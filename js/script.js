@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var main = $(".header_main");
+  var main = $(".header_main").length;
   var nav = $(".nav");
   if (main) {
     window.addEventListener("scroll", function () {
