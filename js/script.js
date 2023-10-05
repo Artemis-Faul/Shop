@@ -79,10 +79,10 @@ let swiperTeam = new Swiper(".swiperTeam", {
 
 const svgImg = $("#stage");
 
-svgImg.load("images/", function (response) {
+svgImg.load("../images/company/infograph.svg", function (response) {
   $(this).addClass("svgLoaded");
   if (!response) {
-    svgImg.load("../../images/company/infograph.svg", function (response) {
+    svgImg.load("../Shop/images/company/infograph.svg", function (response) {
       $(this).addClass("svgLoaded");
       if (!response) {
         // console.log("HEEEEl");
