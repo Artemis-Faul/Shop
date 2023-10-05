@@ -79,17 +79,39 @@ let swiperTeam = new Swiper(".swiperTeam", {
 
 const svgImg = $("#stage");
 
-svgImg.load("../Shop/images/company/infograph.svg", function (response) {
-  $(this).addClass("svgLoaded");
-  if (!response) {
-    svgImg.load("../images/company/infograph.svg", function (response) {
+$.get("../Shop/images/company/infograph.svg")
+  .done(function () {
+    svgImg.load("../Shop/images/company/infograph.svg", function (response) {
       $(this).addClass("svgLoaded");
       if (!response) {
         // console.log("HEEEEl");
       }
     });
-  }
-});
+  })
+  .fail(function () {
+    $.get("../images/company/infograph.svg")
+      .done(function () {
+        svgImg.load("../images/company/infograph.svg", function (response) {
+          $(this).addClass("svgLoaded");
+          if (!response) {
+            // console.log("HEEEEl");
+          }
+        });
+      })
+      .fail(function () {});
+  });
+
+// svgImg.load("../Shop/images/company/infograph.svg", function (response) {
+//   $(this).addClass("svgLoaded");
+//   if (!response) {
+//     svgImg.load("../images/company/infograph.svg", function (response) {
+//       $(this).addClass("svgLoaded");
+//       if (!response) {
+//         // console.log("HEEEEl");
+//       }
+//     });
+//   }
+// });
 
 // const divEl = document.getElementsByTagName('div')[0]
 
@@ -99,10 +121,7 @@ function ChangeSvg(e, x) {
   let elemLeft = (elempPos.left + elempPos.width) / 2;
   let mousePosX = e.clientX;
   let mousePosY = e.clientY;
-  // left - triangle;
-  // let info = document.body.querySelector(".section_infograph");
-  // let infoChild = info.querySelector("[data-name='Edison']")[0];
-  // $(".section_infograph").find("[data-name='Edison']").css("fill", "blue");
+
   let pathUp = document.querySelector("path[data-name='up']");
   let pathLeft = document.querySelector("path[data-name='left']");
   let pathRight = document.querySelector("path[data-name='right']");
@@ -136,7 +155,7 @@ function ChangeSvg(e, x) {
     lineLeft.setAttribute("class", "line-act");
     lineRight.setAttribute("class", "line-disable");
 
-    console.log("LEft");
+    // console.log("LEft");
   } else {
     if (mousePosY <= elemTop) {
       pathUp.setAttribute("class", "show");
@@ -155,7 +174,7 @@ function ChangeSvg(e, x) {
       lineLeft.setAttribute("class", "line-disable");
       lineRight.setAttribute("class", "line-disable");
 
-      console.log("Right TOP");
+      // console.log("Right TOP");
     } else {
       pathUp.setAttribute("class", "hide");
       pathLeft.setAttribute("class", "hide");
@@ -173,7 +192,7 @@ function ChangeSvg(e, x) {
       lineLeft.setAttribute("class", "line-disable");
       lineRight.setAttribute("class", "line-act");
 
-      console.log("Right BOTTOM");
+      // console.log("Right BOTTOM");
     }
   }
   // if (l)
