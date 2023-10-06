@@ -55,7 +55,17 @@ html {
   --black: #041027;
   --blue: #262b74;
   --button-accent-default: #ea2b6c;
-  --icons--accent-gradient: ;
+  --icons-accent-gradient: linear-gradient(
+    125.78deg,
+    #ce2574 6.65%,
+    #1c259b 89.71%
+  );
+
+  --box-accent-gradient: linear-gradient(
+    150.96deg,
+    #ce2574 -22.45%,
+    #1c259b 99.29%
+  );
   --text-dark-grey: #0e0833;
   --text-middle-grey: #918da8;
   --bs-breadcrumb-divider: url("../images/breadcrumbs/breadcrumbs.svg");
@@ -67,6 +77,10 @@ html {
 
 a {
   text-decoration: none;
+}
+
+a:focus {
+  outline: none;
 }
 
 .body {
@@ -375,7 +389,7 @@ h5 {
 }
 
 .section_uptitle {
-  padding: 7% 0 60px;
+  padding: 7% 0 3.25% 0;
   flex-direction: column;
 }
 
@@ -449,7 +463,7 @@ h5 {
   gap: 24px;
 }
 
-.card_coop {
+.card_three {
   padding: 28px 40px 44px 40px;
   border-radius: 16px;
   background: var(--white);
@@ -459,7 +473,7 @@ h5 {
   position: relative;
 }
 
-.card_coop_img {
+.card_three_img {
   width: 80px;
   align-self: center;
 }
@@ -474,7 +488,7 @@ h5 {
   padding: 0;
 }
 
-.card_coop__title {
+.card_three__title {
   padding-bottom: 12px;
 }
 

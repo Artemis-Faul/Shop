@@ -45,75 +45,68 @@ $(document).ready(function () {
 });
 
 // PRODUCTS SWIPER
-let swiperProd = new Swiper(".swiperProd", {
-  loop: true,
-  spaceBetween: 24,
-  autoplay: {
-    delay: 1000,
-  },
-  speed: 1000,
-  slidesPerView: 3,
-});
+if ($(".swiperProd").length) {
+  let swiperProd = new Swiper(".swiperProd", {
+    loop: true,
+    spaceBetween: 24,
+    autoplay: {
+      delay: 1000,
+    },
+    speed: 1000,
+    slidesPerView: 3,
+  });
+}
 
 // TRUST SWIPER
-let swiperTrust = new Swiper(".swiperTrust", {
-  loop: true,
-  spaceBetween: 24,
-  autoplay: {
-    delay: 1000,
-  },
-  speed: 1000,
-  slidesPerView: 3,
-});
+if ($(".swiperTrust").length) {
+  let swiperTrust = new Swiper(".swiperTrust", {
+    loop: true,
+    spaceBetween: 24,
+    autoplay: {
+      delay: 1000,
+    },
+    speed: 1000,
+    slidesPerView: 3,
+  });
+}
 
 // TRUST SWIPER
-let swiperTeam = new Swiper(".swiperTeam", {
-  loop: true,
-  spaceBetween: 24,
-  autoplay: {
-    delay: 1000,
-  },
-  speed: 1000,
-  slidesPerView: 4,
-});
+if ($(".swiperTeam").length) {
+  let swiperTeam = new Swiper(".swiperTeam", {
+    loop: true,
+    spaceBetween: 24,
+    autoplay: {
+      delay: 1000,
+    },
+    speed: 1000,
+    slidesPerView: 4,
+  });
+}
 
 const svgImg = $("#stage");
-
-$.get("../Shop/images/company/infograph.svg")
-  .done(function () {
-    svgImg.load("../Shop/images/company/infograph.svg", function (response) {
-      $(this).addClass("svgLoaded");
-      if (!response) {
-        // console.log("HEEEEl");
-      }
+if (svgImg.length) {
+  $.get("../Shop/images/company/infograph.svg")
+    .done(function () {
+      svgImg.load("../Shop/images/company/infograph.svg", function (response) {
+        $(this).addClass("svgLoaded");
+        if (!response) {
+          // console.log("HEEEEl");
+        }
+      });
+    })
+    .fail(function () {
+      $.get("../images/company/infograph.svg")
+        .done(function () {
+          svgImg.load("../images/company/infograph.svg", function (response) {
+            $(this).addClass("svgLoaded");
+            if (!response) {
+              // console.log("HEEEEl");
+            }
+          });
+        })
+        .fail(function () {});
     });
-  })
-  .fail(function () {
-    $.get("../images/company/infograph.svg")
-      .done(function () {
-        svgImg.load("../images/company/infograph.svg", function (response) {
-          $(this).addClass("svgLoaded");
-          if (!response) {
-            // console.log("HEEEEl");
-          }
-        });
-      })
-      .fail(function () {});
-  });
-
-// svgImg.load("../Shop/images/company/infograph.svg", function (response) {
-//   $(this).addClass("svgLoaded");
-//   if (!response) {
-//     svgImg.load("../images/company/infograph.svg", function (response) {
-//       $(this).addClass("svgLoaded");
-//       if (!response) {
-//         // console.log("HEEEEl");
-//       }
-//     });
-//   }
-// });
-
-// const divEl = document.getElementsByTagName('div')[0]
+}
 
 function ChangeSvg(e, x) {
   let elempPos = x.getBoundingClientRect();
@@ -198,9 +191,25 @@ function ChangeSvg(e, x) {
   // if (l)
   // x.
 }
-// addEventListener("mouseover", (event) => {});
 
-// onmouseover = (event) => {};
+$(document).ready(function () {
+  if ($(".card-wrap").find(".card_acb").length > 9) {
+    $(".card-wrap a:nth-child(n+10)").slideToggle("");
+    $(".show_hide_list").css("display", "block");
+
+    $(".show_hide_list").click(function () {
+      $(".card-wrap a:nth-child(n+10)").slideToggle("");
+      $(this).toggleClass("opnd_g");
+      if ($(this).hasClass("opnd_g")) {
+        $(this).html("Показать меньше");
+      } else {
+        $(this).html("Показать еще");
+      }
+    });
+  } else {
+    $(".show_hide_list").hide();
+  }
+});
 
 // svgImg.pageX
 // ':'+event.pageY"
