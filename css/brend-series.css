@@ -1,20 +1,6 @@
-.series__banner__text {
-  max-width: 710px;
-}
 .big-title_brand {
   padding-top: 8.3%;
   margin-bottom: 20px;
-}
-.series__banner__text {
-  margin-bottom: 24px;
-}
-.btn_condition {
-  border-radius: 50px;
-  background: var(
-    --icons-accent-gradient,
-    linear-gradient(126deg, #ce2574 6.65%, #1c259b 89.71%)
-  );
-  padding: 18px 24px;
 }
 
 .series__banner__img {

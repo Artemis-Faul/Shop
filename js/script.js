@@ -58,17 +58,17 @@ if ($(".swiperProd").length) {
 }
 
 // TRUST SWIPER
-if ($(".swiperTrust").length) {
-  let swiperTrust = new Swiper(".swiperTrust", {
-    loop: true,
-    spaceBetween: 24,
-    autoplay: {
-      delay: 1000,
-    },
-    speed: 1000,
-    slidesPerView: 3,
-  });
-}
+// if ($(".swiperTrust").length) {
+//   let swiperTrust = new Swiper(".swiperTrust", {
+//     loop: true,
+//     spaceBetween: 24,
+//     autoplay: {
+//       delay: 1000,
+//     },
+//     speed: 1000,
+//     slidesPerView: 3,
+//   });
+// }
 
 // TRUST SWIPER
 if ($(".swiperTeam").length) {

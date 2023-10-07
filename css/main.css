@@ -301,6 +301,9 @@ h5 {
   font-weight: 500;
   line-height: 28px;
 }
+.p-24 {
+  margin-bottom: 24px;
+}
 
 .bold {
   font-weight: 700;
@@ -318,6 +321,20 @@ h5 {
 
 .big-title_brand {
   max-width: 710px;
+}
+
+.btn_condition {
+  border-radius: 50px;
+  background: var(
+    --icons-accent-gradient,
+    linear-gradient(126deg, #ce2574 6.65%, #1c259b 89.71%)
+  );
+  padding: 18px 24px;
+}
+
+.series__banner__text {
+  max-width: 710px;
+  margin-bottom: 24px;
 }
 
 @media (max-width: 1440px) {
@@ -440,6 +457,79 @@ h5 {
   .sect_about-comp {
     background-size: inherit;
     background-position-x: -270px;
+  }
+}
+
+/* SLIDER CARDS */
+.prod__slide {
+}
+
+.prod__link {
+  background: var(--white);
+  border-radius: 16px;
+  width: 100%;
+  display: block;
+  max-height: 456px;
+  padding: 28px 40px 44px 40px;
+  text-align: center;
+  text-decoration: none;
+  transition: 300ms ease-out;
+}
+
+.prod__link:hover {
+  transition: 300ms ease-out;
+  padding: 24px 40px 44px 40px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.prod__slide__img {
+  padding-bottom: 28px;
+  position: relative;
+  z-index: 3;
+  height: 240px;
+}
+
+.prod__link::after {
+  content: "";
+  position: absolute;
+  background: url("../images/main-page/shadow2.svg");
+  background-size: cover;
+  width: 210px;
+  fill: #696969;
+  filter: blur(10px);
+  height: 108px;
+  top: 140px;
+  left: 90px;
+}
+
+.prod__card-body {
+}
+
+.prod__card__title {
+  color: var(--black, #041027);
+  padding-bottom: 12px;
+}
+
+.prod__card__text {
+  color: var(--text-dark-grey, #0e0833);
+  padding-bottom: 28px;
+}
+
+.prod__more {
+  color: var(--button-accent-default, #ea2b6c);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@media (max-width: 1440px) {
+  .prod__link {
+    padding: 28px 25px 44px 25px;
+  }
+
+  .prod__link:hover {
+    padding: 24px 25px 44px 25px;
   }
 }
 
