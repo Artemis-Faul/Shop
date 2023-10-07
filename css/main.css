@@ -346,6 +346,7 @@ h5 {
     max-width: 710px;
   }
 }
+
 /* FOOTER */
 .footer {
   background: url("../images/main-page/bg-footer.jpg");
@@ -411,8 +412,8 @@ h5 {
   flex-direction: column;
 }
 
-.section_brend-land {
-  padding: 2.24% 0 0;
+.section_with-breadcrumbs {
+  padding-top: 5.94%;
 }
 
 .slide__img-wrap {
@@ -425,18 +426,17 @@ h5 {
   padding: 80px 0 100px;
   position: relative;
 }
-
-.sect_about-series::after {
+.about-series-bg::after {
   content: "";
   background: url(../images/brend-series/fon-series.png);
   background-size: contain;
-  background-position: center;
   background-repeat: no-repeat;
   width: 50.23%;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
+  z-index: -1;
 }
 
 .brend-right__img {
@@ -451,6 +451,10 @@ h5 {
   .brend-right__img {
     max-width: 39.48%;
     right: 7.35%;
+  }
+
+  .about-series-bg::after {
+    background-position: center;
   }
 }
 
@@ -516,6 +520,10 @@ h5 {
 .ac__block_text {
   max-width: 760px;
   padding: 52px 0;
+}
+
+.ac__block_text_seria {
+  padding: 20px 0 13px;
 }
 
 .ac__subtitle {
@@ -587,7 +595,6 @@ h5 {
 .prod__more {
   color: var(--button-accent-default, #ea2b6c);
   text-align: center;
-  font-size: 18px;
   font-weight: 600;
   line-height: 24px;
 }

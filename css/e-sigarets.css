@@ -1,0 +1,18 @@
+.wrap-violet {
+  background: linear-gradient(180deg, #cfceff 0%, rgba(207, 206, 255, 0) 100%);
+  padding-top: 5.78%;
+}
+
+.sect_sigarets::after {
+  content: "";
+  background: url(../images/el-sigar/e-sig-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50.23%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-position: bottom;
+}
