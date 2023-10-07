@@ -72,11 +72,6 @@
     max-height: 35%;
     left: 530px;
   }
-
-  .sect_about-comp {
-    background-size: inherit;
-    background-position-x: -245px;
-  }
 }
 
 @media (max-width: 1537px) {
@@ -101,11 +96,6 @@
     animation-name: updownone1536;
     max-height: 28%;
     left: 572px;
-  }
-
-  .sect_about-comp {
-    background-size: inherit;
-    background-position-x: -270px;
   }
 }
 

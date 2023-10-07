@@ -124,6 +124,7 @@ a:focus {
 .logo,
 .logo_white {
   margin-right: 50px;
+  height: 31.5px;
 }
 
 .nav {
@@ -414,6 +415,90 @@ h5 {
   padding: 2.24% 0 0;
 }
 
+.slide__img-wrap {
+  height: 240px;
+  margin-bottom: 12px;
+}
+
+/* BREND/BREND_SERIES */
+.sect_about-series {
+  padding: 80px 0 100px;
+  position: relative;
+}
+
+.sect_about-series::after {
+  content: "";
+  background: url(../images/brend-series/fon-series.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50.23%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.brend-right__img {
+  position: absolute;
+  max-width: 30.48%;
+  object-fit: cover;
+  right: 13.35%;
+  top: 0;
+}
+
+@media (max-width: 1537px) {
+  .brend-right__img {
+    max-width: 39.48%;
+    right: 7.35%;
+  }
+}
+
+.brend__card {
+  background: var(--white);
+  border-radius: 16px;
+  width: 100%;
+  display: block;
+  max-height: 420px;
+  padding: 28px 40px 44px 40px;
+  text-align: center;
+}
+
+.brend__card::after {
+  content: "";
+  position: absolute;
+  background: url(../images/main-page/shadow2.svg);
+  background-size: cover;
+  width: 200px;
+  fill: #696969;
+  filter: blur(4px);
+  height: 90px;
+  top: 160px;
+  left: 110px;
+}
+
+@media (max-width: 1537px) {
+  .slide__img-wrap {
+    height: 200px;
+    margin-bottom: 12px;
+  }
+
+  .prod__slide__img {
+    height: 200px;
+  }
+
+  .brend__card {
+    max-height: 384px;
+  }
+
+  .brend__card::after {
+    width: 180px;
+    height: 80px;
+    top: 145px;
+    left: 100px;
+  }
+}
+
 /* TEXT WITH IMG */
 .sect_about-comp {
   padding-top: 100px;
@@ -453,10 +538,10 @@ h5 {
   }
 }
 
-@media (max-width: 1367px) {
+@media (max-width: 1440px) {
   .sect_about-comp {
-    background-size: inherit;
-    background-position-x: -270px;
+    background-position-x: -360px;
+    background-position-y: -30px;
   }
 }
 
@@ -483,25 +568,9 @@ h5 {
 }
 
 .prod__slide__img {
-  padding-bottom: 28px;
   position: relative;
   z-index: 3;
-  height: 240px;
 }
-
-.prod__link::after {
-  content: "";
-  position: absolute;
-  background: url("../images/main-page/shadow2.svg");
-  background-size: cover;
-  width: 210px;
-  fill: #696969;
-  filter: blur(10px);
-  height: 108px;
-  top: 140px;
-  left: 90px;
-}
-
 .prod__card-body {
 }
 
@@ -523,14 +592,8 @@ h5 {
   line-height: 24px;
 }
 
-@media (max-width: 1440px) {
-  .prod__link {
-    padding: 28px 25px 44px 25px;
-  }
-
-  .prod__link:hover {
-    padding: 24px 25px 44px 25px;
-  }
+.btn_bot-slider {
+  margin-bottom: 54px;
 }
 
 /* COOPERATION / 6 CARDS with ICONS*/
