@@ -58,23 +58,22 @@ if ($(".swiperProd").length) {
 }
 
 // TRUST SWIPER
-// if ($(".swiperTrust").length) {
-//   let swiperTrust = new Swiper(".swiperTrust", {
-//     loop: true,
-//     spaceBetween: 24,
-//     autoplay: {
-//       delay: 1000,
-//     },
-//     speed: 1000,
-//     slidesPerView: 3,
-//   });
-// }
-
-// TRUST SWIPER
 if ($(".swiperTeam").length) {
   let swiperTeam = new Swiper(".swiperTeam", {
     loop: true,
     spaceBetween: 24,
+    autoplay: {
+      delay: 1000,
+    },
+    speed: 1000,
+    slidesPerView: 4,
+  });
+}
+
+if ($(".swiperDeliver").length) {
+  let swiperTeam = new Swiper(".swiperDeliver", {
+    loop: true,
+    spaceBetween: 20,
     autoplay: {
       delay: 1000,
     },

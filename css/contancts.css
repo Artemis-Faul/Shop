@@ -1,0 +1,64 @@
+.title_cont {
+  margin-bottom: 12px;
+}
+
+.section_contact {
+  padding-bottom: 0;
+  flex-direction: column;
+  position: relative;
+}
+
+.container_map {
+  position: relative;
+  z-index: 1;
+}
+.map-img {
+  margin: 0;
+}
+
+.map-img::after {
+  content: "";
+  background-image: url(../images/contacts/white-fon.png);
+  height: 100px;
+  width: 100%;
+  background-size: cover;
+  margin: 0;
+  position: absolute;
+  top: calc(90px + 16%);
+  z-index: 0;
+}
+
+.map__aside__wrap {
+  max-width: 348px;
+  background: var(
+    --box-accent-gradient,
+    linear-gradient(151deg, #ce2574 -22.45%, #1c259b 99.29%)
+  );
+  position: absolute;
+  top: 90px;
+  /* height: 821px; */
+  height: calc(100% - 90px);
+  z-index: 2;
+}
+
+.map__aside {
+  padding-top: 88px;
+  gap: 48px;
+}
+
+.map__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.text-under {
+  text-decoration: underline;
+}
+
+@media (max-width: 1600px) {
+  .map__aside__wrap {
+  }
+}
