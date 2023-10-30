@@ -678,6 +678,7 @@
 
   .container_series {
     padding: 0;
+    max-width: 100%;
   }
 
   .series__title {
