@@ -98,3 +98,23 @@
     top: 300px;
   }
 }
+
+@keyframes mobile {
+  0% {
+    top: 130px;
+  }
+
+  100% {
+    top: 115px;
+  }
+}
+
+@keyframes mobileone {
+  0% {
+    top: 170px;
+  }
+
+  100% {
+    top: 155px;
+  }
+}

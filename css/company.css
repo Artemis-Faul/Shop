@@ -47,9 +47,20 @@ path.right-triangle:hover {
 }
 
 #stage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+}
+
+.infogr__img {
+  display: none;
+}
+
+.inforg__title {
+  text-align: start;
+  margin-bottom: 0;
+}
+
+.inf__block {
+  display: none;
 }
 
 @media (max-width: 1537px) {
@@ -84,6 +95,7 @@ path.right-triangle:hover {
   padding: 20px 28px;
   border-radius: 50px;
   display: flex;
+  align-items: center;
   gap: 10px;
   background: var(
     --icons-accent-gradient,
@@ -113,4 +125,11 @@ path.right-triangle:hover {
 
 .team___card__post {
   color: var(--text-middle-grey, #918da8);
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .btn_form {
+    max-width: inherit;
+  }
 }

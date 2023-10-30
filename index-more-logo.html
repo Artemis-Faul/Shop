@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <title>Главная</title>
     <script src="js/jquery-2.2.3.min.js"></script>
 
@@ -13,12 +16,24 @@
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/main-page.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
 
-    <script src="js/swiper-bundle.min.js"></script>
+    <!-- <script src="js/swiper-bundle.min.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
+    <!-- * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} -->
     <header>
-      <section class="section header">
+      <section class="section header header_main">
         <div class="container d-flex align-items-center">
           <img src="images/main-page/logo-white.svg" alt="" class="logo" />
           <nav class="nav">
@@ -81,7 +96,9 @@
                 class="banner__img_one"
               />
             </div>
-            <div class="col-5 offset-7 d-flex justify-content-end">
+            <div
+              class="col-9 col-sm-5 offset-3 offset-sm-7 d-flex justify-content-end"
+            >
               <h5 class="white banner__text">
                 Мы крупный дистрибьютор
                 <span class="bold">
@@ -98,13 +115,13 @@
       <!-- FLOAT FORM -->
       <section class="section sect_float-form">
         <div class="container row">
-          <div class="col-3 p-0">
+          <div class="col col-sm-3 p-0">
             <h5 class="float__title">Заинтересовала продукция?</h5>
             <p class="white text_float">
               Оставь заявку – и получи быстрый ответ
             </p>
           </div>
-          <div class="col-9 justify-content-end">
+          <div class="col col-sm-9 justify-content-end">
             <form class="float-form d-flex">
               <input
                 type="text"
@@ -140,7 +157,7 @@
         <div class="container">
           <h2 class="sect__title ac__title">О КОМПАНИИ</h2>
           <div class="row">
-            <div class="col-7 ac__block_text">
+            <div class="col-sm-7 ac__block_text">
               <h4 class="ac__subtitle">
                 Cотрудничая c TRIOM – вы доверяетесь профессионалам, которые
                 гарантируют безупречное качество.
@@ -154,7 +171,7 @@
                 электронные сигареты, а также расходные материалы и аксессуары
                 для них.
               </p>
-              <p class="text">
+              <p class="text content_sh" sh-name="text">
                 Наша компания – поставщик vape систем для крупных магазинов
                 России, стран СНГ и Европы, которые ведут успешный бизнес и
                 динамично развивается в узкопрофильной сфере. TRIOM является
@@ -162,8 +179,12 @@
                 «VOZOL», а так же одним из прямых импортеров - «SMOANT»,
                 «GEEKVAPE», «ELF BAR», «VAPORESSO», «JUSTFOG» и др.
               </p>
+              <div class="btn btn_sh" btn-name="text">
+                <span class="span_sh">Показать еще</span>
+              </div>
+              <!-- <button class="btn btn_hs">Читать ещё</button> -->
             </div>
-            <div class="col-5 d-flex justify-content-end">
+            <div class="col-sm-5 d-flex justify-content-end">
               <img
                 src="images/main-page/about-company.svg"
                 alt=""
@@ -182,7 +203,7 @@
             СОТРУДНИЧЕСТВО С <span class="special-word">TRIOM</span> – ЭТО
           </h2>
 
-          <div class="container d-flex flex-column card__row">
+          <div class="d-flex flex-column card__row">
             <!-- ROW-1 -->
             <div class="row card__row">
               <div class="col card_three">
@@ -196,7 +217,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">Оперативный заказ</h5>
                   <p class="card-text text">
                     Ваши заказы обрабатываются в течение одного дня
@@ -214,7 +235,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">Оригинальный товар</h5>
                   <p class="card-text text">
                     Мы сотрудничаем с производителями напрямую, без посредников
@@ -232,7 +253,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">Оперативная доставка</h5>
                   <p class="card-text text">
                     Сотрудничаем с проверенными логичтическими компаниями
@@ -242,7 +263,7 @@
             </div>
 
             <!-- ROW-2 -->
-            <div class="row card__row">
+            <div class="row card__row content_sh" sh-name="cards">
               <div class="col card_three">
                 <img
                   src="images/main-page/coop-cards/4.svg"
@@ -254,7 +275,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">Эксклюзивные бренды</h5>
                   <p class="card-text text">
                     Эксклюзивный импортер таких брендов, как MASKKING и VOZOL
@@ -272,7 +293,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">География поставок</h5>
                   <p class="card-text text">
                     Осуществляем доставку по всей России и странам СНГ
@@ -290,7 +311,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">Удобная оплата</h5>
                   <p class="card-text text">
                     Подберем удобный для вас вариант оплаты
@@ -298,6 +319,10 @@
                 </div>
               </div>
             </div>
+          </div>
+          <!-- MOBILE HIDE-SHOW -->
+          <div class="btn btn_sh" btn-name="cards">
+            <span class="span_sh">Показать еще</span>
           </div>
         </div>
       </section>
@@ -307,15 +332,17 @@
       <section class="section sect_prod">
         <div class="container swiper-container swiperProd">
           <h2 class="sect__title">ПРОДУКЦИЯ</h2>
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper swiper-wrapper_prod">
             <!-- SLIDE 1 -->
             <div class="swiper-slide prod__slide">
-              <a href="" class="prod__link">
-                <img
-                  src="images/main-page/prod/e-sigarretes.svg"
-                  alt=""
-                  class="prod__slide__img"
-                />
+              <a href="e-sigarets.html" class="prod__link">
+                <div class="slide__img-wrap">
+                  <img
+                    src="images/main-page/prod/e-sigarretes.svg"
+                    alt=""
+                    class="prod__slide__img"
+                  />
+                </div>
                 <div class="prod__card-body">
                   <h4 class="prod__card__title">Электронные сигареты</h4>
                   <p class="text card-text prod__card__text">
@@ -328,11 +355,13 @@
             <!-- SLIDE 2 -->
             <div class="swiper-slide prod__slide">
               <a href="" class="prod__link">
-                <img
-                  src="images/main-page/prod/pod-systems.svg"
-                  alt=""
-                  class="prod__slide__img"
-                />
+                <div class="slide__img-wrap">
+                  <img
+                    src="images/main-page/prod/pod-systems.svg"
+                    alt=""
+                    class="prod__slide__img"
+                  />
+                </div>
                 <div class="prod__card-body">
                   <h4 class="prod__card__title">POD системы</h4>
                   <p class="text card-text prod__card__text">
@@ -345,11 +374,13 @@
             <!-- SLIDE 3 -->
             <div class="swiper-slide prod__slide">
               <a href="" class="prod__link">
-                <img
-                  src="images/main-page/prod/chewing-tobacco.svg"
-                  alt=""
-                  class="prod__slide__img"
-                />
+                <div class="slide__img-wrap">
+                  <img
+                    src="images/main-page/prod/chewing-tobacco.svg"
+                    alt=""
+                    class="prod__slide__img"
+                  />
+                </div>
                 <div class="prod__card-body">
                   <h4 class="prod__card__title">Жевательный табак</h4>
                   <p class="text card-text prod__card__text">
@@ -362,11 +393,13 @@
             <!-- SLIDE 4 -->
             <div class="swiper-slide prod__slide">
               <a href="" class="prod__link">
-                <img
-                  src="images/main-page/prod/vape-liquid.svg"
-                  alt=""
-                  class="prod__slide__img"
-                />
+                <div class="slide__img-wrap">
+                  <img
+                    src="images/main-page/prod/vape-liquid.svg"
+                    alt=""
+                    class="prod__slide__img"
+                  />
+                </div>
                 <div class="prod__card-body">
                   <h4 class="prod__card__title">Жидкости для испарителей</h4>
                   <p class="text card-text prod__card__text">
@@ -383,91 +416,116 @@
 
       <!-- DISTRIBUTORS -->
       <section class="section sect_dist">
-        <div class="container container_dist">
-          <h2 class="sect__title">МЫ ОФИЦИАЛЬНЫЕ ДИСТРИБЬЮТОРЫ</h2>
-          <div class="row dist__row">
-            <div class="col dist__card">
+        <h2 class="sect__title">МЫ ОФИЦИАЛЬНЫЕ ДИСТРИБЬЮТОРЫ</h2>
+        <div class="swiper swiperDistr">
+          <div class="swiper-wrapper swiper-wrapper_distr">
+            <div class="dist__card swiper-slide">
               <a href="">
                 <img
-                  src="images/main-page/distr/masking.svg"
+                  src="images/main-page/distr/masking.png"
                   alt=""
                   class="dist__img"
                 />
               </a>
             </div>
-
-            <div class="col dist__card">
+            <div class="dist__card swiper-slide">
               <a href="">
                 <img
-                  src="images/main-page/distr/vosol.svg"
+                  src="images/main-page/distr/pufbar.png"
                   alt=""
                   class="dist__img"
                 />
               </a>
             </div>
-
-            <div class="col dist__card">
+            <div class="dist__card card_color swiper-slide">
               <a href="">
                 <img
-                  src="images/main-page/distr/elfbar.svg"
+                  src="images/main-page/distr/vosol.png"
                   alt=""
                   class="dist__img"
                 />
               </a>
             </div>
-            <div class="col dist__card">
+            <div class="dist__card swiper-slide">
               <a href="">
                 <img
-                  src="images/main-page/distr/masking.svg"
+                  src="images/main-page/distr/elfbar.png"
                   alt=""
                   class="dist__img"
                 />
               </a>
             </div>
-
-            <div class="col dist__card">
+            <div class="dist__card swiper-slide">
               <a href="">
                 <img
-                  src="images/main-page/distr/vosol.svg"
+                  src="images/main-page/distr/smok.png"
                   alt=""
                   class="dist__img"
                 />
               </a>
             </div>
-
-            <div class="col dist__card">
+          </div>
+        </div>
+        <div class="swiper swiperDistr">
+          <div class="swiper-wrapper swiper-wrapper_distr">
+            <div class="col dist__card card_color swiper-slide">
               <a href="">
                 <img
-                  src="images/main-page/distr/elfbar.svg"
+                  src="images/main-page/distr/chiken.png"
                   alt=""
                   class="dist__img"
                 />
               </a>
             </div>
-            <div class="col dist__card">
+            <div class="col dist__card swiper-slide">
               <a href="">
                 <img
-                  src="images/main-page/distr/masking.svg"
+                  src="images/main-page/distr/vooppo.png"
                   alt=""
                   class="dist__img"
                 />
               </a>
             </div>
-
-            <div class="col dist__card">
+            <div class="col dist__card swiper-slide">
               <a href="">
                 <img
-                  src="images/main-page/distr/vosol.svg"
+                  src="images/main-page/distr/hqd.png"
                   alt=""
                   class="dist__img"
                 />
               </a>
             </div>
-
-            <div class="col dist__card">
+            <div class="col dist__card swiper-slide">
               <a href="">
                 <img
-                  src="images/main-page/distr/elfbar.svg"
+                  src="images/main-page/distr/elmerk.png"
+                  alt=""
+                  class="dist__img"
+                />
+              </a>
+            </div>
+            <div class="col dist__card card_color swiper-slide">
+              <a href="">
+                <img
+                  src="images/main-page/distr/brusko.png"
+                  alt=""
+                  class="dist__img"
+                />
+              </a>
+            </div>
+            <div class="col dist__card swiper-slide">
+              <a href="">
+                <img
+                  src="images/main-page/distr/veefoo.png"
+                  alt=""
+                  class="dist__img"
+                />
+              </a>
+            </div>
+            <div class="col dist__card swiper-slide">
+              <a href="">
+                <img
+                  src="images/main-page/distr/veefoo.png"
                   alt=""
                   class="dist__img"
                 />
@@ -534,7 +592,7 @@
 
       <!-- TRUST -->
       <section class="section sect_trust">
-        <div class="container swiper-container swiperProd">
+        <div class="container swiper-container swiperTrust">
           <h2 class="sect__title">НАМ ДОВЕРЯЮТ</h2>
           <div class="swiper-wrapper">
             <!-- SLIDE 1 -->
@@ -577,7 +635,7 @@
             <!-- SLIDE 4 -->
             <div class="swiper-slide trust__slide">
               <img
-                src="images/main-page/trust-comp/grade.svg"
+                src="images/main-page/trust-comp/grades.svg"
                 alt=""
                 class="trust__slide__img"
               />
@@ -593,8 +651,8 @@
 
     <footer>
       <section class="section footer">
-        <div class="container d-flex flex-column align-items-center">
-          <div class="footer-menu d-flex align-items-center">
+        <div class="container d-flex flex-column">
+          <div class="footer-menu">
             <img
               src="images/main-page/logo-white.svg"
               alt=""
@@ -644,11 +702,6 @@
         </div>
       </section>
     </footer>
-    <script
-      language="JavaScript"
-      type="text/javascript"
-      src="js/script.js"
-    ></script>
     <script src="js/script.js"></script>
   </body>
 </html>

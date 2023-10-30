@@ -155,9 +155,6 @@
   );
 }
 
-.swiper-slide {
-}
-
 .swiperProd {
   padding-bottom: 10px;
 }
@@ -187,7 +184,7 @@
 }
 
 .trust__slide__img {
-  padding-bottom: 26px;
+  margin-bottom: 26px;
 }
 
 .trust__card-body {

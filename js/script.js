@@ -1,75 +1,156 @@
-$(document).ready(function () {
-  var main = $(".header_main").length;
-  var nav = $(".nav");
-  if (main) {
-    window.addEventListener("scroll", function () {
-      var top = $(this).scrollTop();
-      if (top > 0) {
-        nav.children(".nav-link").removeClass("white");
-        $(".number").removeClass("white");
-        $(".header ").css("background", "#fff");
-        $(".logo").attr("src", "images/main-page/logo.svg");
-        $(".menu-icons")
-          .children(".menu-icon")
-          .eq(0)
-          .attr("src", "images/main-page/icons/telegram.svg");
-        $(".menu-icons")
-          .children(".menu-icon")
-          .eq(1)
-          .attr("src", "images/main-page/icons/instagram.svg");
-        $(".menu-icons")
-          .children(".menu-icon")
-          .eq(2)
-          .attr("src", "images/main-page/icons/email.svg");
-      } else {
-        nav.children(".nav-link").addClass("white");
-        $(".number").addClass("white");
-        $(".logo").attr("src", "images/main-page/logo-white.svg");
-        $(".header ").css("background", "transparent");
+var w = $(window).width(); // Получаем ширину окна
 
-        $(".menu-icons")
-          .children(".menu-icon")
-          .eq(0)
-          .attr("src", "images/main-page/icons/instagram_white.svg");
-        $(".menu-icons")
-          .children(".menu-icon")
-          .eq(1)
-          .attr("src", "images/main-page/icons/telegram_white.svg");
-        $(".menu-icons")
-          .children(".menu-icon")
-          .eq(2)
-          .attr("src", "images/main-page/icons/email_white.svg");
-      }
+// MENU
+// if (w >= 560) {
+
+function changeMenu() {
+  var nav = $(".nav");
+  nav.children(".nav-link").removeClass("white");
+  $(".number").removeClass("white");
+  // $(".header ").css("background", "#fff");
+  $(".header ").addClass("bg-white");
+  $(".logo").attr("src", "images/main-page/logo.svg");
+  $(".menu-icons")
+    .find("img")
+    .eq(0)
+    .attr("src", "images/main-page/icons/instagram.svg");
+  $(".menu-icons")
+    .find("img")
+    .eq(1)
+    .attr("src", "images/main-page/icons/telegram.svg");
+  $(".menu-icons")
+    .find("img")
+    .eq(2)
+    .attr("src", "images/main-page/icons/email.svg");
+}
+
+if (w >= 560) {
+  $(document).ready(function () {
+    var main = $(".header_main").length;
+    var nav = $(".nav");
+    if (main) {
+      window.addEventListener("scroll", function () {
+        var top = $(this).scrollTop();
+        if (top > 1) {
+          changeMenu();
+        } else {
+          nav.children(".nav-link").addClass("white");
+          $(".number").addClass("white");
+          $(".logo").attr("src", "images/main-page/logo-white.svg");
+          $(".header ").removeClass("bg-white");
+
+          $(".menu-icons")
+            .find("img")
+            .eq(0)
+            .attr("src", "images/main-page/icons/instagram_white.svg");
+
+          $(".menu-icons")
+            .find("img")
+            .eq(1)
+            .attr("src", "images/main-page/icons/telegram_white.svg");
+
+          $(".menu-icons")
+            .find("img")
+            .eq(2)
+            .attr("src", "images/main-page/icons/email_white.svg");
+        }
+      });
+    }
+  });
+} else {
+  changeMenu();
+}
+
+// PRODUCTS SWIPER
+if (w >= 560) {
+  if ($(".swiperProd").length) {
+    let swiperProd = new Swiper(".swiperProd", {
+      loop: true,
+      autoplay: {
+        delay: 1000,
+      },
+      speed: 1000,
+      slidesPerView: 3,
+      spaceBetween: 24,
     });
+  }
+}
+
+// DISTRIBUTORS SWIPER
+let count = 1;
+$(".container_dist").each(function () {
+  // console.log($(this).find(".swiper-slide").length);
+  if ($(this).find(".swiper-slide").length > 6) {
+    let className = "swiperDistr" + count;
+    count += 1;
+    $(this).addClass(className);
+    var swiper = new Swiper("." + className, {
+      loop: true,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
+
+      centeredSlides: true * (count % 2),
+
+      slidesPerView: 1.8,
+      spaceBetween: 8,
+      breakpoints: {
+        // when window width is >= 320px
+        560: {
+          slidesPerView: 5.5,
+          spaceBetween: 24,
+        },
+      },
+    });
+  } else {
+    $(this).find(".swiper-wrapper").addClass("swiper-wrapper_distr");
   }
 });
 
-// PRODUCTS SWIPER
-if ($(".swiperProd").length) {
-  let swiperProd = new Swiper(".swiperProd", {
+if ($(".swiperTrust").length) {
+  let swiperTrust = new Swiper(".swiperTrust", {
     loop: true,
-    spaceBetween: 24,
     autoplay: {
       delay: 1000,
     },
     speed: 1000,
-    slidesPerView: 3,
+    slidesPerView: 2,
+    spaceBetween: 8,
+
+    breakpoints: {
+      // when window width is >= 320px
+      560: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+    },
   });
 }
 
-// TRUST SWIPER
+// SWIPER TEAM
 if ($(".swiperTeam").length) {
   let swiperTeam = new Swiper(".swiperTeam", {
     loop: true,
-    spaceBetween: 24,
+
     autoplay: {
       delay: 1000,
     },
     speed: 1000,
-    slidesPerView: 4,
+    spaceBetween: 8,
+    slidesPerView: 2,
+
+    breakpoints: {
+      // when window width is >= 320px
+      560: {
+        slidesPerView: 4,
+        spaceBetween: 24,
+      },
+    },
   });
 }
-
+// DELIVER SWIPER
 if ($(".swiperDeliver").length) {
   let swiperTeam = new Swiper(".swiperDeliver", {
     loop: true,
@@ -82,31 +163,33 @@ if ($(".swiperDeliver").length) {
   });
 }
 
-const svgImg = $("#stage");
-if (svgImg.length) {
-  $.get("../Shop/images/company/infograph.svg")
-    .done(function () {
-      svgImg.load("../Shop/images/company/infograph.svg", function (response) {
-        $(this).addClass("svgLoaded");
-        if (!response) {
-          // console.log("HEEEEl");
-        }
-      });
-    })
-    .fail(function () {
-      $.get("../images/company/infograph.svg")
-        .done(function () {
-          svgImg.load("../images/company/infograph.svg", function (response) {
-            $(this).addClass("svgLoaded");
-            if (!response) {
-              // console.log("HEEEEl");
-            }
-          });
-        })
-        .fail(function () {});
-    });
-}
+// INFOGRAPH
+// const svgImg = $("#stage");
+// if (svgImg.length) {
+//   $.get("../Shop/images/company/infograph.svg")
+//     .done(function () {
+//       svgImg.load("../Shop/images/company/infograph.svg", function (response) {
+//         $(this).addClass("svgLoaded");
+//         if (!response) {
+//           // console.log("HEEEEl");
+//         }
+//       });
+//     })
+//     .fail(function () {
+//       $.get("VapeShop/images/company/infograph.svg")
+//         .done(function () {
+//           svgImg.load("/images/company/infograph.svg", function (response) {
+//             $(this).addClass("svgLoaded");
+//             if (!response) {
+//               // console.log("HEEEEl");
+//             }
+//           });
+//         })
+//         .fail(function () {});
+//     });
+// }
 
+// INFOGRAPH ANIMATIONS
 function ChangeSvg(e, x) {
   let elempPos = x.getBoundingClientRect();
   let elemTop = elempPos.top + elempPos.height / 2;
@@ -191,35 +274,62 @@ function ChangeSvg(e, x) {
   // x.
 }
 
+//SHOW_HIDE CARD IN ALLBRANDS
 $(document).ready(function () {
   if ($(".card-wrap").find(".card_acb").length > 9) {
-    $(".card-wrap a:nth-child(n+10)").slideToggle("");
-    $(".show_hide_list").css("display", "block");
+    $(".card-wrap a:nth-child(n+10)").slideToggle();
+    $(".btn_sh_brends").css("display", "flex");
 
-    $(".show_hide_list").click(function () {
-      $(".card-wrap a:nth-child(n+10)").slideToggle("");
-      $(this).toggleClass("opnd_g");
-      if ($(this).hasClass("opnd_g")) {
-        $(this).html("Показать меньше");
+    $(".btn_sh_brends").click(function () {
+      $(".card-wrap a:nth-child(n+10)").slideToggle();
+      $(".span_sh").toggleClass("opnd_g");
+      if ($(".span_sh").hasClass("opnd_g")) {
+        $(".span_sh").html("Показать меньше");
       } else {
-        $(this).html("Показать еще");
+        $(".span_sh").html("Показать еще");
       }
     });
   } else {
-    $(".show_hide_list").hide();
+    $(".btn_sh_brends").hide();
   }
 });
+$(".btn_sh").css("display", "none");
+//SHOW_HIDE CARD ON BUTTON-CLICK
+if (w <= 560) {
+  $(".banner__title").attr("src", "images/main-page/triom-mob.svg");
 
-// svgImg.pageX
-// ':'+event.pageY"
+  $(".btn_sh").css("display", "flex");
+  $(".btn_float").html("Написать");
+  $(".content_sh").slideToggle(300);
 
-// $(document).ready(function(){
-//   var w = $(window).width(); // Получаем ширину окна
-//   if (w <= 1601) {
-//     // Если ширина окна меньше, либо равна 600
-//     // $(".banner__img_one").css("animation-name", "updownone1600");
-//   } else if (w <= 1536) {
-//     // Если ширина окна меньше, либо равна 600
-//     // $(".banner__img_one").css("animation-name", "updownone1600");
-//   }
+  $(".btn_sh").click(function () {
+    let btnAttr = $(this).attr("btn-name");
+    $(".content_sh[sh-name=" + btnAttr + "]").slideToggle(300);
+
+    let span = $(this).find($(".span_sh"));
+    console.log(span);
+    span.toggleClass("opnd_g");
+
+    if (span.hasClass("opnd_g")) {
+      if (btnAttr == "text") {
+        span.html("Читать меньше");
+      } else {
+        span.html("Показать меньше");
+      }
+    } else {
+      if (btnAttr == "text") {
+        span.html("Читать еще");
+      } else {
+        span.html("Показать еще");
+      }
+    }
+  });
+}
+
+// $(document).ready(function () {
+//   // var w = $(window).width(); // Получаем ширину окна
+//   // if (w <= 560) {
+//   //   $(".btn_float").html("Написать");
+//   //   // } else if (w <= 1536) {
+//   // }
 // });
