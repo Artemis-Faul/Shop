@@ -340,6 +340,9 @@ h5 {
 .p-24 {
   margin-bottom: 24px;
 }
+.mb-16 {
+  margin-bottom: 16px;
+}
 
 .bold {
   font-weight: 700;
@@ -471,6 +474,7 @@ h5 {
   padding: 80px 0 100px;
   position: relative;
 }
+
 .about-series-bg::after {
   content: "";
   background: url(../images/brend-series/fon-series.png);
@@ -1025,6 +1029,10 @@ h5 {
   content: "";
 }
 
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0;
+}
+
 /* BTN HIDE_SHOW */
 .btn_sh {
   cursor: pointer;
@@ -1072,7 +1080,6 @@ h5 {
 @media (max-width: 576px) {
   .btn_sh {
     width: 100%;
-    margin-top: 16px;
     padding: 10px 0;
     background: rgba(159, 27, 205, 0.12);
   }

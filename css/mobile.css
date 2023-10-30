@@ -40,6 +40,24 @@
     line-height: 20px;
   }
 
+  .btn {
+    padding: 10px 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  h5 {
+    font-size: 1rem;
+    line-height: 20px;
+  }
+
+  .p-24 {
+    margin-bottom: 12px;
+  }
+
   /* MOBILE MENU */
 
   .hamb {
@@ -170,15 +188,6 @@
     margin-bottom: 32px;
     align-items: center;
   }
-
-  h5 {
-    font-size: 1rem;
-    line-height: 20px;
-  }
-
-  .p-24 {
-    margin-bottom: 12px;
-  }
 }
 
 /* MAIN PAGE */
@@ -229,7 +238,6 @@
   }
 
   .btn_float {
-    padding: 10px 20px;
     min-width: auto;
     font-size: 16px;
   }
@@ -343,10 +351,6 @@
   }
 
   .swiper-wrapper_distr {
-    /* display: flex;
-    width: auto;
-    gap: unset;
-    justify-content: unset; */
   }
 
   .dist__img {
@@ -588,5 +592,116 @@
 
   .form-check {
     margin-bottom: 12px;
+  }
+}
+
+/* BREND_SERIES */
+@media (max-width: 576px) {
+  .section_breadcrumbs {
+    padding-top: 60px;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    height: 13px;
+    transform: rotate(180deg);
+  }
+
+  .breadcrumb-item {
+    display: none;
+  }
+
+  .mob-bread {
+    display: block;
+  }
+  .btn_condition {
+    background: var(
+      --box-accent-gradient,
+      linear-gradient(151deg, #ce2574 -22.45%, #1c259b 99.29%)
+    );
+  }
+
+  .section_with-breadcrumbs {
+    padding-top: 4px;
+  }
+
+  .series__right {
+    display: none;
+  }
+
+  .sect_about-series {
+    padding: 20px 0;
+    background: url(../images/main-page/mob-text-fone.png);
+    background-position-y: 105%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .series__banner__text {
+    margin-bottom: 16px;
+  }
+
+  .about-series-bg::after {
+    content: none;
+  }
+
+  .bs__img {
+    max-width: 212px;
+  }
+
+  /* SERIES CARDS */
+  .series_orange {
+    background: linear-gradient(
+      195deg,
+      #ffe3c9 22.78%,
+      rgba(255, 227, 201, 0) 84.13%
+    );
+  }
+  .series_yellow {
+    background: linear-gradient(
+      195deg,
+      #fffac9 23.29%,
+      rgba(255, 250, 201, 0) 89.38%
+    );
+  }
+
+  .series_blue {
+    background: linear-gradient(
+      194deg,
+      #c9fcff 20.47%,
+      rgba(201, 252, 255, 0) 79.53%
+    );
+  }
+
+  .section_card-series {
+    padding: 40px 0;
+  }
+
+  .series__title {
+    text-align: start;
+    font-size: 18px;
+  }
+
+  .series_color {
+    padding: 0px 16px;
+    border-radius: 0;
+    flex-direction: column-reverse;
+  }
+
+  .card-series__img {
+    max-height: 180px;
+  }
+
+  .card-series__stats {
+    padding: 0;
+  }
+
+  .series__param {
+    margin-bottom: 4px;
+  }
+  .series__value {
+    font-size: 16px;
+  }
+  .container_series {
+    padding: 0;
   }
 }

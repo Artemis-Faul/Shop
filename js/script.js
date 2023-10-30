@@ -322,20 +322,25 @@ if (w <= 560) {
 
   $(".btn_sh").click(function () {
     let btnAttr = $(this).attr("btn-name");
-    $(".content_sh[sh-name=" + btnAttr + "]").slideToggle(200);
+    let shType = $(this).attr("sh-type");
+    if (shType == "text") {
+      $(".content_sh[sh-name=" + btnAttr + "]").slideToggle(200);
+    } else {
+      $(".content_sh[sh-name=" + btnAttr + "]").slideToggle(0);
+    }
 
     let span = $(this).find($(".span_sh"));
     console.log(span);
     span.toggleClass("opnd_g");
 
     if (span.hasClass("opnd_g")) {
-      if (btnAttr == "text") {
+      if (shType == "text") {
         span.html("Читать меньше");
       } else {
         span.html("Показать меньше");
       }
     } else {
-      if (btnAttr == "text") {
+      if (shType == "text") {
         span.html("Читать еще");
       } else {
         span.html("Показать еще");
