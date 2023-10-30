@@ -1,8 +1,5 @@
 var w = $(window).width(); // Получаем ширину окна
 
-// MENU
-// if (w >= 560) {
-
 function changeMenu() {
   var nav = $(".nav");
   nav.children(".nav-link").removeClass("white");
@@ -23,7 +20,7 @@ function changeMenu() {
     .eq(2)
     .attr("src", "images/main-page/icons/email.svg");
 }
-
+// MENU
 if (w >= 560) {
   $(document).ready(function () {
     var main = $(".header_main").length;
@@ -58,9 +55,25 @@ if (w >= 560) {
     }
   });
 } else {
+  // MOBILE
   changeMenu();
 }
 
+//MOBILE MENU
+console.log($(".side-menu").length);
+
+$(".side-menu").on("change", function () {
+  $(".header").toggleClass("active");
+  $(".nav").toggleClass("active");
+  $(".mobile-menu").toggleClass("active");
+  $(".menu-icons").toggleClass("active");
+  $(".header__contact").toggleClass("active");
+
+  // if (this.checked) {
+  // } else {
+  //   // $(".header").removeClass("active");
+  // }
+});
 // PRODUCTS SWIPER
 if (w >= 560) {
   if ($(".swiperProd").length) {
@@ -109,6 +122,7 @@ $(".container_dist").each(function () {
   }
 });
 
+//  TRUST SWIPER
 if ($(".swiperTrust").length) {
   let swiperTrust = new Swiper(".swiperTrust", {
     loop: true,
@@ -150,6 +164,7 @@ if ($(".swiperTeam").length) {
     },
   });
 }
+
 // DELIVER SWIPER
 if ($(".swiperDeliver").length) {
   let swiperTeam = new Swiper(".swiperDeliver", {
@@ -294,17 +309,18 @@ $(document).ready(function () {
   }
 });
 $(".btn_sh").css("display", "none");
+
 //SHOW_HIDE CARD ON BUTTON-CLICK
 if (w <= 560) {
   $(".banner__title").attr("src", "images/main-page/triom-mob.svg");
 
   $(".btn_sh").css("display", "flex");
   $(".btn_float").html("Написать");
-  $(".content_sh").slideToggle(300);
+  $(".content_sh").slideToggle(200);
 
   $(".btn_sh").click(function () {
     let btnAttr = $(this).attr("btn-name");
-    $(".content_sh[sh-name=" + btnAttr + "]").slideToggle(300);
+    $(".content_sh[sh-name=" + btnAttr + "]").slideToggle(200);
 
     let span = $(this).find($(".span_sh"));
     console.log(span);
