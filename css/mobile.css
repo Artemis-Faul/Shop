@@ -676,6 +676,10 @@
     padding: 40px 0;
   }
 
+  .container_series {
+    padding: 0;
+  }
+
   .series__title {
     text-align: start;
     font-size: 18px;
@@ -701,7 +705,35 @@
   .series__value {
     font-size: 16px;
   }
-  .container_series {
-    padding: 0;
+
+  .series__text {
+    margin-bottom: 16px;
+  }
+
+  /* WHOLESALE PARTNERS */
+  .card__row {
+    gap: 8px;
+  }
+
+  .card__row_first {
+    margin-bottom: 8px;
+  }
+
+  .card_num_partn .card-body_rul {
+    margin-top: 30px;
+    padding-left: 32px;
+  }
+
+  .card_num_partn .num__img-back {
+    height: 145px;
+    left: -18px;
+  }
+
+  .card_num_partn .card_num__title {
+    padding-bottom: 8px;
+  }
+
+  .card__link {
+    display: none;
   }
 }
