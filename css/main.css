@@ -131,7 +131,7 @@ a:focus {
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
   position: fixed;
   height: 90px;
-  z-index: 10;
+  z-index: 11;
   font-family: "Raleway";
 }
 
@@ -396,6 +396,11 @@ h5 {
 .footer_nav {
   gap: 52px;
   margin-right: 67px;
+}
+@media (max-width: 1440px) {
+  .footer_nav {
+    margin-right: 50px;
+  }
 }
 
 .footer-link {

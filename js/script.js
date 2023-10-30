@@ -52,6 +52,8 @@ if (w >= 560) {
             .attr("src", "images/main-page/icons/email_white.svg");
         }
       });
+    } else {
+      changeMenu();
     }
   });
 } else {
@@ -60,7 +62,7 @@ if (w >= 560) {
 }
 
 //MOBILE MENU
-console.log($(".side-menu").length);
+// console.log($(".side-menu").length);
 
 $(".side-menu").on("change", function () {
   $(".header").toggleClass("active");
