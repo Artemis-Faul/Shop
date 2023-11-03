@@ -91,6 +91,26 @@ if (w >= 560) {
   }
 }
 
+if ($(".swiperProdTop").length) {
+  let swiperProd = new Swiper(".swiperProdTop", {
+    loop: true,
+    autoplay: {
+      delay: 1000,
+    },
+    speed: 1000,
+    slidesPerView: 2,
+    spaceBetween: 8,
+
+    breakpoints: {
+      // when window width is >= 320px
+      560: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+    },
+  });
+}
+
 // DISTRIBUTORS SWIPER
 let count = 1;
 $(".container_dist").each(function () {
@@ -294,16 +314,25 @@ function ChangeSvg(e, x) {
 //SHOW_HIDE CARD IN ALLBRANDS
 $(document).ready(function () {
   if ($(".card-wrap").find(".card_acb").length > 9) {
-    $(".card-wrap a:nth-child(n+10)").slideToggle();
+    if (w >= 560) {
+      $(".card-wrap a:nth-child(n+10)").slideToggle();
+    } else {
+      $(".card-wrap a:nth-child(n+9)").slideToggle();
+    }
     $(".btn_sh_brends").css("display", "flex");
 
     $(".btn_sh_brends").click(function () {
-      $(".card-wrap a:nth-child(n+10)").slideToggle();
-      $(".span_sh").toggleClass("opnd_g");
-      if ($(".span_sh").hasClass("opnd_g")) {
-        $(".span_sh").html("Показать меньше");
+      let span = $(this).find($(".span_sh"));
+      if (w >= 560) {
+        $(".card-wrap a:nth-child(n+10)").slideToggle(400);
+        span.toggleClass("opnd_g");
+        if (span.hasClass("opnd_g")) {
+          span.html("Показать меньше");
+        } else {
+          span.html("Показать еще");
+        }
       } else {
-        $(".span_sh").html("Показать еще");
+        $(".card-wrap a:nth-child(n+9)").slideToggle(400);
       }
     });
   } else {
@@ -312,12 +341,17 @@ $(document).ready(function () {
 });
 $(".btn_sh").css("display", "none");
 
-//SHOW_HIDE CARD ON BUTTON-CLICK
+//MOB ADAPTIVE
 if (w <= 560) {
+  $("#breadcrumb").prepend(
+    '<li class="breadcrumb-item active" aria-current="page"></li>'
+  );
+  $("#pod").html("POD<br/> системы");
   $(".banner__title").attr("src", "images/main-page/triom-mob.svg");
-
   $(".btn_sh").css("display", "flex");
   $(".btn_float").html("Написать");
+
+  //SHOW_HIDE CARD ON BUTTON-CLICK
   $(".content_sh").slideToggle(200);
 
   $(".btn_sh").click(function () {
@@ -326,7 +360,7 @@ if (w <= 560) {
     if (shType == "text") {
       $(".content_sh[sh-name=" + btnAttr + "]").slideToggle(200);
     } else {
-      $(".content_sh[sh-name=" + btnAttr + "]").slideToggle(0);
+      $(".content_sh[sh-name=" + btnAttr + "]").slideToggle(200);
     }
 
     let span = $(this).find($(".span_sh"));

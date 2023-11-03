@@ -20,8 +20,12 @@
 
 @media (max-width: 576px) {
   .container {
-    max-width: 320px;
+    /* max-width: 320px; */
     padding: 0 16px;
+  }
+
+  .container_mob {
+    padding: 0;
   }
   .sect__title {
     font-size: 20px;
@@ -206,6 +210,7 @@
 
   .banner__container {
     /* padding-top: 57%; */
+    max-width: 320px;
     padding-top: 182px;
   }
 
@@ -315,6 +320,7 @@
 
   .slide__img-wrap {
     height: 80px;
+    margin-bottom: 8px;
   }
 
   .swiperProd {
@@ -322,9 +328,9 @@
   }
 
   .prod__slide {
-    border-radius: 16px;
-    max-width: 140px;
-    max-height: 162px;
+    margin-bottom: 16px;
+    box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.1);
+    /* max-width: 140px; */
   }
 
   .prod__link {
@@ -340,8 +346,13 @@
   }
 
   .prod__card__text,
-  .prod__more {
+  .prod__more,
+  .prod__card_hide {
     display: none;
+  }
+
+  .prod__more_brend {
+    display: block;
   }
 
   /* DISTRIBUTORS */
@@ -400,6 +411,10 @@
     width: 100%;
     max-height: 75px;
     margin-bottom: 12px;
+  }
+
+  .trust__card__text {
+    padding: 0 10px;
   }
 
   /* FOOTER */
@@ -490,10 +505,11 @@
 
   .uptitle__img {
     max-width: 100%;
+    position: relative;
   }
 
   .uptitle__left {
-    padding-top: 57.2%;
+    padding: 16px;
   }
 
   .uptitle__title {
@@ -736,5 +752,99 @@
 
   .card__link {
     display: none;
+  }
+}
+
+/* ALLBRANDS */
+@media (max-width: 576px) {
+  .br-title__right {
+    padding: 16px;
+  }
+
+  .br-title__img {
+    max-width: 100%;
+    left: 0;
+    position: relative;
+  }
+
+  .br-title__title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .br-title__text {
+    display: block;
+  }
+
+  .section_acb {
+    padding: 0 0 40px;
+  }
+
+  .card-wrap {
+    gap: 8px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 16px;
+  }
+
+  .card_acb .card_three__title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .card_acb {
+    flex-direction: column;
+    padding: 12px 12px 16px 12px;
+    width: 100%;
+  }
+
+  .card__img_acb {
+    padding: 12px;
+    margin-right: 0;
+    width: inherit;
+    height: inherit;
+  }
+
+  .card-wrap__img {
+    height: 64px;
+  }
+
+  .text_acb {
+    display: none;
+  }
+
+  .btn_sh_brends:before {
+    background: none;
+  }
+}
+
+/* E-SIGARETS */
+@media (max-width: 576px) {
+  .wrap-violet {
+    background: linear-gradient(180deg, #cfceff 0%, rgba(207, 206, 255, 0) 60%);
+    padding-top: 0;
+  }
+
+  .wrap-green {
+    background: linear-gradient(180deg, #e1ffc9 0%, rgba(225, 255, 201, 0) 31%);
+  }
+
+  .sect_sigarets {
+    background-image: url(../images/el-sigar/e-sig-mob.jpg);
+    background-position-y: 100%;
+  }
+
+  .brend-right__img {
+    display: none;
+  }
+
+  .brend__card {
+    height: 100%;
+    padding: 12px 10px 16px 10px;
+  }
+
+  .brend__card::after {
+    display: none;
+  }
+  .btn_bot-slider {
+    margin-bottom: 24px;
   }
 }

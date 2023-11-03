@@ -9,7 +9,7 @@
 }
 
 .br-title__right {
-  padding: 34px 2.5% 3% 32px;
+  padding: 34px 0 3% 32px;
 }
 
 .br-title__title {
@@ -27,7 +27,7 @@
     height: 54.445%;
   }
   .br-title__right {
-    padding: 34px 2.5% 3% 84px;
+    padding: 34px 0 3% 44px;
   }
 }
 
@@ -37,7 +37,7 @@
     height: 62.445%;
   }
   .br-title__right {
-    padding: 35px 2.5% 3% 130px;
+    padding: 2% 0 3% 110px;
   }
 }
 
@@ -53,6 +53,10 @@
     max-width: 50.5%;
     height: 61.445%;
   }
+
+  .br-title__right {
+    padding: 2% 0 3% 150px;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -66,10 +70,9 @@
 }
 
 .card-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 40px;
 }
 
