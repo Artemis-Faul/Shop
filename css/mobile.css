@@ -437,7 +437,9 @@
   .footer-menu > .logo_white {
     margin-bottom: 40px;
   }
+
   .menu-icons_footer {
+    display: flex;
     margin-right: 0;
     gap: 20px;
   }
@@ -512,13 +514,23 @@
     padding: 16px;
   }
 
+  .uptitle__aside {
+    padding: 16px 16px 0px;
+  }
+
   .uptitle__title {
     font-size: 16px;
     margin-bottom: 12px;
   }
 
+  .asside-col {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
   .uptitle__aside__subtitle {
     font-size: 16px;
+    margin-bottom: 4px;
   }
 
   .uptitle__left__text {
@@ -528,6 +540,9 @@
 
   .uptitle__aside__icon {
     margin-right: 8px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0;
   }
   /* INFOGRAPH   */
   .section_infograph {
@@ -608,6 +623,10 @@
 
   .form-check {
     margin-bottom: 12px;
+  }
+
+  .btn_form {
+    max-width: inherit;
   }
 }
 
@@ -846,5 +865,112 @@
   }
   .btn_bot-slider {
     margin-bottom: 24px;
+  }
+}
+
+/* CONTACTS */
+@media (max-width: 576px) {
+  .section_contact {
+    padding-bottom: 0;
+  }
+
+  .map__aside__wrap {
+    height: auto;
+    position: initial;
+    max-width: 100%;
+  }
+
+  .map__aside {
+    padding: 32px 16px;
+    gap: 32px;
+  }
+
+  .map__col {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+/* WHOLESALE CLIENTS */
+@media (max-width: 576px) {
+  .big-text-linear {
+    font-size: 30px;
+    margin-bottom: 4px;
+    line-height: 38px;
+  }
+
+  .client__banner {
+    top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .uptitle__clients {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 10px;
+    margin-bottom: 16px;
+  }
+
+  .btn_condition_clients {
+    max-width: 100%;
+  }
+
+  .btn_sh_clients {
+  }
+
+  .btn_sh_clients {
+    display: flex;
+    background: white;
+    margin-bottom: 1px;
+  }
+
+  .btn_sh_clients:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(125.78deg, #ce2574 6.65%, #1c259b 89.71%);
+  }
+
+  /* PAY METHOD */
+  .sect_pay {
+    padding: 40px 0;
+  }
+
+  .card_four {
+    flex-direction: row;
+    padding: 0;
+  }
+  .card__row_pay {
+    gap: 24px;
+  }
+
+  .card_four_img {
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    margin-right: 8px;
+  }
+
+  /* DELIVER */
+  .sect_deliver {
+    padding: 40px 0;
+  }
+
+  .sect_dist_clients {
+    padding: 20px 0 60px;
+  }
+
+  .deliver__slide__img {
+    height: 104px;
+    padding: 0;
+    width: inherit;
+    object-fit: contain;
   }
 }

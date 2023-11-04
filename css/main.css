@@ -1049,7 +1049,7 @@ h5 {
   border-radius: 50px;
   background: #fff;
   background-clip: padding-box;
-  border: solid 2px transparent;
+  border: solid 1px transparent;
   align-items: center;
   justify-content: center;
 }

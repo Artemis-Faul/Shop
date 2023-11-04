@@ -126,10 +126,3 @@ path.right-triangle:hover {
 .team___card__post {
   color: var(--text-middle-grey, #918da8);
 }
-
-/* MOBILE */
-@media (max-width: 576px) {
-  .btn_form {
-    max-width: inherit;
-  }
-}

@@ -188,18 +188,19 @@ if ($(".swiperTeam").length) {
 }
 
 // DELIVER SWIPER
-if ($(".swiperDeliver").length) {
-  let swiperTeam = new Swiper(".swiperDeliver", {
-    loop: true,
-    spaceBetween: 20,
-    autoplay: {
-      delay: 1000,
-    },
-    speed: 1000,
-    slidesPerView: 4,
-  });
+if (w >= 560) {
+  if ($(".swiperDeliver").length) {
+    let swiperTeam = new Swiper(".swiperDeliver", {
+      loop: true,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 1000,
+      },
+      speed: 1000,
+      slidesPerView: 4,
+    });
+  }
 }
-
 // INFOGRAPH
 // const svgImg = $("#stage");
 // if (svgImg.length) {
@@ -339,8 +340,8 @@ $(document).ready(function () {
     $(".btn_sh_brends").hide();
   }
 });
-$(".btn_sh").css("display", "none");
 
+$(".btn_sh").hide();
 //MOB ADAPTIVE
 if (w <= 560) {
   $("#breadcrumb").prepend(
@@ -350,6 +351,7 @@ if (w <= 560) {
   $(".banner__title").attr("src", "images/main-page/triom-mob.svg");
   $(".btn_sh").css("display", "flex");
   $(".btn_float").html("Написать");
+  // $(".btn_sh_clients").show();
 
   //SHOW_HIDE CARD ON BUTTON-CLICK
   $(".content_sh").slideToggle(200);
@@ -381,6 +383,8 @@ if (w <= 560) {
       }
     }
   });
+} else {
+  // $(".btn_sh").hide();
 }
 
 // $(document).ready(function () {

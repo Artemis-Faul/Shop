@@ -11,38 +11,55 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/franchise.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
   </head>
   <body>
     <header>
       <section class="section header">
-        <div class="container d-flex align-items-center">
-          <img src="images/main-page/logo.svg" alt="" class="logo" />
-          <nav class="nav">
-            <a class="nav-link" href="#">О компании</a>
-            <a class="nav-link" href="#">Продукция</a>
-            <a class="nav-link" href="#">Бренды</a>
-            <a class="nav-link" href="#">Сотрудничество</a>
-            <a class="nav-link" href="#">Контакты</a>
-          </nav>
-          <div class="menu-icons">
+        <div class="container container_head">
+          <!-- Mobile view-->
+          <div class="mobile-menu">
+            <input class="side-menu" type="checkbox" id="side-menu" />
+            <label class="hamb" for="side-menu"
+              ><span class="hamb-line"></span
+            ></label>
+            <a href="index.html"
+              ><img src="images/main-page/logo-white.svg" alt="" class="logo"
+            /></a>
             <img
-              src="images/main-page/icons/instagram.svg"
+              src="images/main-page/icons/mob-phone-call.svg"
               alt=""
-              class="menu-icon"
-            />
-            <img
-              src="images/main-page/icons/telegram.svg"
-              alt=""
-              class="menu-icon"
-            />
-            <img
-              src="images/main-page/icons/email.svg"
-              alt=""
-              class="menu-icon"
+              class="header__call"
             />
           </div>
-          <div class="header__contact">
-            <p class="number">8 800 707 27 30</p>
+          <!-- MENU -->
+          <nav class="nav menu">
+            <a class="nav-link white" href="company.html">О компании</a>
+            <a class="nav-link white" href="#pdoducts">Продукция</a>
+            <a class="nav-link white" href="allbrands.html">Бренды</a>
+            <a class="nav-link white" href="#">Сотрудничество</a>
+            <a class="nav-link white" href="contacts.html">Контакты</a>
+          </nav>
+
+          <div class="menu-icons" id="menu">
+            <a href="" class="menu-icon">
+              <img src="images/main-page/icons/instagram_white.svg" alt="" />
+            </a>
+            <a href="" class="menu-icon">
+              <img src="images/main-page/icons/telegram_white.svg" alt="" />
+            </a>
+            <a href="" class="menu-icon">
+              <img src="images/main-page/icons/email_white.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="header__contact" id="contact">
+            <img
+              src="images/main-page/icons/mob-phone-call.svg"
+              alt=""
+              class="hide_call"
+            />
+            <p class="number white">8 800 707 27 30</p>
             <p class="header__contact__text">
               <img
                 src="images/main-page/icons/phone-call.svg"
@@ -64,80 +81,93 @@
             Франшиза TRIOM – быстрое решение для запуска современного бизнеса.
           </h1>
         </div>
-        <div class="container">
-          <div class="row">
+        <div class="container container_mob">
+          <div class="row flex-column flex-sm-row">
             <img
               src="images/franchise/right-img.jpg"
               alt=""
               class="uptitle__img uptitle__img_right"
             />
-            <div class="col-3 asside-col asside-col_right">
-              <div class="row flex-column uptitle__aside">
-                <div class="col">
-                  <img
-                    src="images/company/icons/watch.svg"
-                    alt=""
-                    class="uptitle__aside__icon"
-                  />
+            <div class="row flex-column-reverse flex-sm-row">
+              <div class="col-sm-3 asside-col asside-col_right">
+                <div class="row flex-column uptitle__aside">
+                  <div class="col d-flex d-sm-block">
+                    <img
+                      src="images/company/icons/watch.svg"
+                      alt=""
+                      class="uptitle__aside__icon"
+                    />
+                    <div>
+                      <h5 class="uptitle__aside__subtitle">
+                        Быстрая обработка заказов
+                      </h5>
+                      <p class="text">
+                        Ваши заказы обрабатываются в течение одного дня
+                      </p>
+                    </div>
+                  </div>
 
-                  <h5 class="uptitle__aside__subtitle">
-                    Быстрая обработка заказов
-                  </h5>
-                  <p class="text">
-                    Ваши заказы обрабатываются в течение одного дня
-                  </p>
-                </div>
-                <div class="col">
-                  <img
-                    src="images/company/icons/airplane.svg"
-                    alt=""
-                    class="uptitle__aside__icon"
-                  />
+                  <div class="col d-flex d-sm-block">
+                    <img
+                      src="images/company/icons/airplane.svg"
+                      alt=""
+                      class="uptitle__aside__icon"
+                    />
 
-                  <h5 class="uptitle__aside__subtitle">Быстрая доставка</h5>
-                  <p class="text">
-                    Мы работаем только с проверенными службами доставки
-                  </p>
-                </div>
-                <div class="col">
-                  <img
-                    src="images/company/icons/sent.svg"
-                    alt=""
-                    class="uptitle__aside__icon"
-                  />
+                    <div>
+                      <h5 class="uptitle__aside__subtitle">Быстрая доставка</h5>
+                      <p class="text">
+                        Мы работаем только с проверенными службами доставки
+                      </p>
+                    </div>
+                  </div>
 
-                  <h5 class="uptitle__aside__subtitle">По всей России</h5>
-                  <p class="text">У нас действует доставка по всей России</p>
-                </div>
-                <div class="col">
-                  <img
-                    src="images/company/icons/list.svg"
-                    alt=""
-                    class="uptitle__aside__icon"
-                  />
+                  <div class="col d-flex d-sm-block">
+                    <img
+                      src="images/company/icons/sent.svg"
+                      alt=""
+                      class="uptitle__aside__icon"
+                    />
+                    <div>
+                      <h5 class="uptitle__aside__subtitle">По всей России</h5>
+                      <p class="text">
+                        У нас действует доставка по всей России
+                      </p>
+                    </div>
+                  </div>
 
-                  <h5 class="uptitle__aside__subtitle">Удобная оплата</h5>
-                  <p class="text">
-                    Удобные и выгодные для вас варианты оплаты заказа
-                  </p>
+                  <div class="col d-flex d-sm-block">
+                    <img
+                      src="images/company/icons/list.svg"
+                      alt=""
+                      class="uptitle__aside__icon"
+                    />
+                    <div>
+                      <h5 class="uptitle__aside__subtitle">Удобная оплата</h5>
+                      <p class="text">
+                        Удобные и выгодные для вас варианты оплаты заказа
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col uptitle__left">
-              <h4 class="uptitle__title">
-                Cотрудничая c TRIOM – вы доверяетесь профессионалам, которые
-                гарантируют безупречное качество.
-              </h4>
-              <p class="text uptitle__right__text">
-                За 5 лет активной работы и плодотворного сотрудничества с нашими
-                клиентами и партнерами, мы смогли достичь серьезных результатов
-                и стать одним из лидеров рынка. Сегодня наша компания ведет
-                бизнес, как на территории России, так и в странах СНГ и Европы.
-                Благодаря штату квалифицированных сотрудников и отслеживанию
-                мировых тенденций, мы быстро реагируем на изменения на рынке,
-                учитывает новые модные веяния и предлагаем для своих клиентов
-                современную, надежную и безопасную продукцию.
-              </p>
+              <div class="col uptitle__left">
+                <h4 class="uptitle__title">
+                  Cотрудничая c TRIOM – вы доверяетесь профессионалам, которые
+                  гарантируют безупречное качество.
+                </h4>
+                <p class="text uptitle__right__text">
+                  За 5 лет активной работы и плодотворного сотрудничества с
+                  нашими клиентами и партнерами, мы смогли достичь серьезных
+                  результатов и стать одним из лидеров рынка. Сегодня наша
+                  компания ведет бизнес, как на территории России, так и в
+                  странах СНГ и Европы. Благодаря штату квалифицированных
+                  сотрудников и отслеживанию мировых тенденций, мы быстро
+                  реагируем на изменения на рынке, учитывает новые модные веяния
+                  и предлагаем для своих клиентов современную, надежную и
+                  безопасную продукцию.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -151,7 +181,7 @@
             СОТРУДНИЧЕСТВО С <span class="special-word">TRIOM</span> – ЭТО
           </h2>
 
-          <div class="container d-flex flex-column card__row">
+          <div class="d-flex flex-column card__row mb-16">
             <!-- ROW-1 -->
             <div class="row card__row">
               <div class="col card_three">
@@ -165,7 +195,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">Оперативный заказ</h5>
                   <p class="card-text text">
                     Ваши заказы обрабатываются в течение одного дня
@@ -183,7 +213,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">Оригинальный товар</h5>
                   <p class="card-text text">
                     Мы сотрудничаем с производителями напрямую, без посредников
@@ -201,7 +231,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">Оперативная доставка</h5>
                   <p class="card-text text">
                     Сотрудничаем с проверенными логичтическими компаниями
@@ -211,7 +241,7 @@
             </div>
 
             <!-- ROW-2 -->
-            <div class="row card__row">
+            <div class="row card__row content_sh" sh-name="cards">
               <div class="col card_three">
                 <img
                   src="images/main-page/coop-cards/4.svg"
@@ -223,7 +253,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">Эксклюзивные бренды</h5>
                   <p class="card-text text">
                     Эксклюзивный импортер таких брендов, как MASKKING и VOZOL
@@ -241,7 +271,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">География поставок</h5>
                   <p class="card-text text">
                     Осуществляем доставку по всей России и странам СНГ
@@ -259,7 +289,7 @@
                   alt=""
                   class="coop__img-back"
                 />
-                <div class="card-body card-body_coop text-center">
+                <div class="card-body card-body_coop">
                   <h5 class="card_three__title">Удобная оплата</h5>
                   <p class="card-text text">
                     Подберем удобный для вас вариант оплаты
@@ -267,6 +297,10 @@
                 </div>
               </div>
             </div>
+          </div>
+          <!-- MOBILE HIDE-SHOW -->
+          <div class="btn btn_sh" btn-name="cards" sh-type="content">
+            <span class="span_sh">Показать еще</span>
           </div>
         </div>
       </section>
@@ -280,7 +314,7 @@
             Пишите по любым вопросам – наши специалисты ответят в ближайшее
             время
           </p>
-          <div class="container">
+          <div class="row">
             <form class="form-form">
               <div class="row">
                 <div class="col">
@@ -288,14 +322,14 @@
                     class="form-select form__input form__select"
                     aria-label="Default select example"
                   >
-                    <option selected>Отдел продаж</option>
+                    <option selected>Выберите отдел продаж</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
                 </div>
               </div>
-              <div class="row">
+              <div class="row form__two-row">
                 <div class="col">
                   <input
                     type="text"
@@ -305,17 +339,17 @@
                     placeholder="Ваше имя"
                   />
                 </div>
-              </div>
-              <div class="row">
                 <div class="col">
                   <input
                     type="tel"
                     class="form__input"
                     name="tel"
                     id="tel"
-                    placeholder="Номер телефона"
+                    placeholder="Телефон"
                   />
                 </div>
+              </div>
+              <div class="row form__two-row">
                 <div class="col">
                   <input
                     type="email"
@@ -323,6 +357,15 @@
                     name="email"
                     id="email"
                     placeholder="Электронная почта"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form__input"
+                    name="adress"
+                    id="adress"
+                    placeholder="Адрес сайта"
                   />
                 </div>
               </div>
@@ -335,13 +378,13 @@
                     id="field"
                     cols="30"
                     rows="10"
-                    placeholder="Название поля"
+                    placeholder="Ваш вопрос здесь"
                   ></textarea>
                 </div>
               </div>
 
               <div class="row">
-                <div class="col-9">
+                <div class="col-11 col-sm-9">
                   <div class="form-check">
                     <input
                       class="form-check-input form__check"
@@ -355,7 +398,7 @@
                     </label>
                   </div>
                 </div>
-                <div class="col-3 d-flex justify-content-end">
+                <div class="col col-sm-3 d-flex justify-content-end">
                   <button type="submit" class="btn btn_form">Отправить</button>
                 </div>
               </div>
@@ -375,37 +418,34 @@
               alt=""
               class="logo_white"
             />
-            <nav class="nav">
-              <a class="footer-link" href="#">О компании</a>
-              <a class="footer-link" href="#">Продукция</a>
-              <a class="footer-link" href="#">Бренды</a>
-              <a class="footer-link" href="#">Сотрудничество</a>
-              <a class="footer-link" href="#">Контакты</a>
+            <nav class="nav footer_nav" id="footer_nav">
+              <div class="footer__nav_mob">
+                <a class="footer-link" href="#">О компании</a>
+                <a class="footer-link" href="#">Продукция</a>
+                <a class="footer-link" href="#">Бренды</a>
+              </div>
+              <div class="footer__nav_mob">
+                <a class="footer-link" href="#">Сотрудничество</a>
+                <a class="footer-link" href="#">Контакты</a>
+              </div>
             </nav>
-            <div class="menu-icons">
-              <a href="#">
-                <img
-                  src="images/main-page/icons/instagram_white.svg"
-                  alt=""
-                  class="menu-icon"
-                />
+            <div class="menu-icons menu-icons_footer" id="footer_icons">
+              <a href="" class="menu-icon">
+                <img src="images/main-page/icons/instagram_white.svg" alt="" />
               </a>
-              <a href="#">
-                <img
-                  src="images/main-page/icons/telegram_white.svg"
-                  alt=""
-                  class="menu-icon"
-                />
+              <a href="" class="menu-icon">
+                <img src="images/main-page/icons/telegram_white.svg" alt="" />
               </a>
-              <a href="#">
-                <img
-                  src="images/main-page/icons/email_white.svg"
-                  alt=""
-                  class="menu-icon"
-                />
+              <a href="" class="menu-icon">
+                <img src="images/main-page/icons/email_white.svg" alt="" />
               </a>
             </div>
-            <div class="header__contact d-flex">
+            <div class="header__contact d-flex" id="footer_contact">
+              <img
+                src="images/main-page/icons/mob-phone-call.svg"
+                alt=""
+                class="footer_call"
+              />
               <p class="footer-number white">8 800 707 27 30</p>
               <br />
             </div>

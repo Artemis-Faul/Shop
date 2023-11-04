@@ -38,7 +38,7 @@
   top: 90px;
   /* height: 821px; */
   height: calc(100% - 90px);
-  z-index: 2;
+  z-index: 3;
 }
 
 .map__aside {

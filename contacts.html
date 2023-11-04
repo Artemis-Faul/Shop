@@ -12,40 +12,57 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/contancts.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
 
     <script src="js/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header>
       <section class="section header">
-        <div class="container d-flex align-items-center">
-          <img src="images/main-page/logo.svg" alt="" class="logo" />
-          <nav class="nav">
-            <a class="nav-link" href="#">О компании</a>
-            <a class="nav-link" href="#">Продукция</a>
-            <a class="nav-link" href="#">Бренды</a>
-            <a class="nav-link" href="#">Сотрудничество</a>
-            <a class="nav-link" href="#">Контакты</a>
-          </nav>
-          <div class="menu-icons">
+        <div class="container container_head">
+          <!-- Mobile view-->
+          <div class="mobile-menu">
+            <input class="side-menu" type="checkbox" id="side-menu" />
+            <label class="hamb" for="side-menu"
+              ><span class="hamb-line"></span
+            ></label>
+            <a href="index.html"
+              ><img src="images/main-page/logo-white.svg" alt="" class="logo"
+            /></a>
             <img
-              src="images/main-page/icons/instagram.svg"
+              src="images/main-page/icons/mob-phone-call.svg"
               alt=""
-              class="menu-icon"
-            />
-            <img
-              src="images/main-page/icons/telegram.svg"
-              alt=""
-              class="menu-icon"
-            />
-            <img
-              src="images/main-page/icons/email.svg"
-              alt=""
-              class="menu-icon"
+              class="header__call"
             />
           </div>
-          <div class="header__contact">
-            <p class="number">8 800 707 27 30</p>
+          <!-- MENU -->
+          <nav class="nav menu">
+            <a class="nav-link white" href="company.html">О компании</a>
+            <a class="nav-link white" href="#pdoducts">Продукция</a>
+            <a class="nav-link white" href="allbrands.html">Бренды</a>
+            <a class="nav-link white" href="#">Сотрудничество</a>
+            <a class="nav-link white" href="contacts.html">Контакты</a>
+          </nav>
+
+          <div class="menu-icons" id="menu">
+            <a href="" class="menu-icon">
+              <img src="images/main-page/icons/instagram_white.svg" alt="" />
+            </a>
+            <a href="" class="menu-icon">
+              <img src="images/main-page/icons/telegram_white.svg" alt="" />
+            </a>
+            <a href="" class="menu-icon">
+              <img src="images/main-page/icons/email_white.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="header__contact" id="contact">
+            <img
+              src="images/main-page/icons/mob-phone-call.svg"
+              alt=""
+              class="hide_call"
+            />
+            <p class="number white">8 800 707 27 30</p>
             <p class="header__contact__text">
               <img
                 src="images/main-page/icons/phone-call.svg"
@@ -70,42 +87,6 @@
             Также приглашаем вас в наш уютный офис.
           </p>
         </div>
-        <div class="col-4 offset-8 map__aside__wrap">
-          <div class="row flex-column map__aside">
-            <div class="col map__col">
-              <img
-                src="images/contacts/icons/sell.jpg "
-                alt=""
-                class="uptitle__aside__icon"
-              />
-
-              <h4 class="uptitle__aside__subtitle">Отдел продаж</h4>
-              <p class="text text-under">sales@triom.biz</p>
-            </div>
-            <div class="col map__col">
-              <img
-                src="images/contacts/icons/buy.svg "
-                alt=""
-                class="uptitle__aside__icon"
-              />
-
-              <h4 class="uptitle__aside__subtitle">Отдел закупки</h4>
-              <p class="text text-under">a.kryshalovich@triom.biz</p>
-            </div>
-            <div class="col map__col">
-              <img
-                src="images/contacts/icons/location.svg "
-                alt=""
-                class="uptitle__aside__icon"
-              />
-
-              <h4 class="uptitle__aside__subtitle">Адрес</h4>
-              <p class="text text-center">
-                125315, г. Москва, Ленинградский проспект, д. 80Б, к. 3
-              </p>
-            </div>
-          </div>
-        </div>
         <div class="row section map-img">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.01758558658!2d37.506615576492486!3d55.81029508756178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54834338697c1%3A0xa06a57c7b1b41e43!2sLeningradsky%20Ave%2C%2080%D0%B1%2C%20Moskva%2C%20125190!5e0!3m2!1sen!2sru!4v1697746127648!5m2!1sen!2sru"
@@ -116,6 +97,45 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+        </div>
+        <div class="col-sm-4 offset-sm-8 map__aside__wrap">
+          <div class="row flex-column map__aside">
+            <div class="col map__col">
+              <img
+                src="images/contacts/icons/sell.svg"
+                alt=""
+                class="uptitle__aside__icon"
+              />
+              <div>
+                <h4 class="uptitle__aside__subtitle">Отдел продаж</h4>
+                <p class="text text-under">sales@triom.biz</p>
+              </div>
+            </div>
+            <div class="col map__col">
+              <img
+                src="images/contacts/icons/buy.svg "
+                alt=""
+                class="uptitle__aside__icon"
+              />
+              <div>
+                <h4 class="uptitle__aside__subtitle">Отдел закупки</h4>
+                <p class="text text-under">a.kryshalovich@triom.biz</p>
+              </div>
+            </div>
+            <div class="col map__col">
+              <img
+                src="images/contacts/icons/location.svg "
+                alt=""
+                class="uptitle__aside__icon"
+              />
+              <div>
+                <h4 class="uptitle__aside__subtitle">Адрес</h4>
+                <p class="text text-sm-center col-10">
+                  125315, г. Москва, Ленинградский проспект, д. 80Б, к. 3
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- UP TITLE -->
@@ -128,7 +148,7 @@
             Пишите по любым вопросам – наши специалисты ответят в ближайшее
             время
           </p>
-          <div class="container">
+          <div class="row">
             <form class="form-form">
               <div class="row">
                 <div class="col">
@@ -143,7 +163,7 @@
                   </select>
                 </div>
               </div>
-              <div class="row">
+              <div class="row form__two-row">
                 <div class="col">
                   <input
                     type="text"
@@ -153,17 +173,17 @@
                     placeholder="Ваше имя"
                   />
                 </div>
-              </div>
-              <div class="row">
                 <div class="col">
                   <input
                     type="tel"
                     class="form__input"
                     name="tel"
                     id="tel"
-                    placeholder="Номер телефона"
+                    placeholder="Телефон"
                   />
                 </div>
+              </div>
+              <div class="row form__two-row">
                 <div class="col">
                   <input
                     type="email"
@@ -171,6 +191,15 @@
                     name="email"
                     id="email"
                     placeholder="Электронная почта"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form__input"
+                    name="adress"
+                    id="adress"
+                    placeholder="Адрес сайта"
                   />
                 </div>
               </div>
@@ -183,13 +212,13 @@
                     id="field"
                     cols="30"
                     rows="10"
-                    placeholder="Название поля"
+                    placeholder="Ваш вопрос здесь"
                   ></textarea>
                 </div>
               </div>
 
               <div class="row">
-                <div class="col-9">
+                <div class="col-11 col-sm-9">
                   <div class="form-check">
                     <input
                       class="form-check-input form__check"
@@ -203,7 +232,7 @@
                     </label>
                   </div>
                 </div>
-                <div class="col-3 d-flex justify-content-end">
+                <div class="col col-sm-3 d-flex justify-content-end">
                   <button type="submit" class="btn btn_form">Отправить</button>
                 </div>
               </div>
@@ -223,37 +252,34 @@
               alt=""
               class="logo_white"
             />
-            <nav class="nav">
-              <a class="footer-link" href="#">О компании</a>
-              <a class="footer-link" href="#">Продукция</a>
-              <a class="footer-link" href="#">Бренды</a>
-              <a class="footer-link" href="#">Сотрудничество</a>
-              <a class="footer-link" href="#">Контакты</a>
+            <nav class="nav footer_nav" id="footer_nav">
+              <div class="footer__nav_mob">
+                <a class="footer-link" href="#">О компании</a>
+                <a class="footer-link" href="#">Продукция</a>
+                <a class="footer-link" href="#">Бренды</a>
+              </div>
+              <div class="footer__nav_mob">
+                <a class="footer-link" href="#">Сотрудничество</a>
+                <a class="footer-link" href="#">Контакты</a>
+              </div>
             </nav>
-            <div class="menu-icons">
-              <a href="#">
-                <img
-                  src="images/main-page/icons/instagram_white.svg"
-                  alt=""
-                  class="menu-icon"
-                />
+            <div class="menu-icons menu-icons_footer" id="footer_icons">
+              <a href="" class="menu-icon">
+                <img src="images/main-page/icons/instagram_white.svg" alt="" />
               </a>
-              <a href="#">
-                <img
-                  src="images/main-page/icons/telegram_white.svg"
-                  alt=""
-                  class="menu-icon"
-                />
+              <a href="" class="menu-icon">
+                <img src="images/main-page/icons/telegram_white.svg" alt="" />
               </a>
-              <a href="#">
-                <img
-                  src="images/main-page/icons/email_white.svg"
-                  alt=""
-                  class="menu-icon"
-                />
+              <a href="" class="menu-icon">
+                <img src="images/main-page/icons/email_white.svg" alt="" />
               </a>
             </div>
-            <div class="header__contact d-flex">
+            <div class="header__contact d-flex" id="footer_contact">
+              <img
+                src="images/main-page/icons/mob-phone-call.svg"
+                alt=""
+                class="footer_call"
+              />
               <p class="footer-number white">8 800 707 27 30</p>
               <br />
             </div>
