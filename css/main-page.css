@@ -30,6 +30,7 @@
 
 .banner__text {
   font-weight: 500;
+  line-height: 32px;
   max-width: 426px;
   padding-top: calc(43vh - 128px);
 }

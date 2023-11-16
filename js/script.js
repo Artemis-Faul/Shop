@@ -59,6 +59,9 @@ if (w >= 560) {
 } else {
   // MOBILE
   changeMenu();
+  // $(".hamb-line").css(" background", "#fff");
+  // .hamb-line {
+  //   background: #0e0833;
 }
 
 //MOBILE MENU
@@ -77,7 +80,7 @@ $(".side-menu").on("change", function () {
   // }
 });
 // PRODUCTS SWIPER
-if (w >= 560) {
+if (w >= 1025) {
   if ($(".swiperProd").length) {
     let swiperProd = new Swiper(".swiperProd", {
       loop: true,
@@ -134,6 +137,11 @@ $(".container_dist").each(function () {
       breakpoints: {
         // when window width is >= 320px
         560: {
+          slidesPerView: 3.5,
+          spaceBetween: 24,
+        },
+
+        1025: {
           slidesPerView: 5.5,
           spaceBetween: 24,
         },
@@ -157,7 +165,7 @@ if ($(".swiperTrust").length) {
 
     breakpoints: {
       // when window width is >= 320px
-      560: {
+      1024: {
         slidesPerView: 3,
         spaceBetween: 24,
       },
@@ -387,6 +395,11 @@ if (w <= 560) {
   // $(".btn_sh").hide();
 }
 
+function noDigits(event) {
+  if (isNaN(event.key) && event.key !== "Backspace") {
+    event.preventDefault();
+  }
+}
 // $(document).ready(function () {
 //   // var w = $(window).width(); // Получаем ширину окна
 //   // if (w <= 560) {

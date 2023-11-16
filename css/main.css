@@ -96,6 +96,10 @@ a:focus {
   outline: none;
 }
 
+a:hover {
+  color: #fff;
+}
+
 .body {
   font-family: "Raleway";
   font-weight: 500;
@@ -206,6 +210,10 @@ a:focus {
   display: none;
 }
 
+.hide_call {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .hamb {
     display: block;
@@ -290,6 +298,13 @@ a:focus {
     padding-left: 10px;
   }
 }
+
+@media (max-width: 1441px) {
+  .float-form {
+    padding-left: 25px;
+  }
+}
+
 @media (max-width: 1367px) {
   .sect_float-form {
     height: 9vh;
@@ -669,11 +684,16 @@ h5 {
 
 @media (max-width: 1440px) {
   .uptitle__img {
-    max-width: 61.5%;
+    max-width: 63%;
   }
 
   .uptitle__aside {
     gap: 16px 0;
+  }
+}
+@media (max-width: 1367px) {
+  .uptitle__img {
+    max-width: 64%;
   }
 }
 
@@ -854,6 +874,9 @@ h5 {
 @media (max-width: 1537px) {
   .dist__img {
     max-height: 120px;
+  }
+  .dist__card {
+    max-width: 234px;
   }
 }
 

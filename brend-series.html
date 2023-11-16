@@ -29,11 +29,13 @@
             <a href="index.html"
               ><img src="images/main-page/logo-white.svg" alt="" class="logo"
             /></a>
-            <img
-              src="images/main-page/icons/mob-phone-call.svg"
-              alt=""
-              class="header__call"
-            />
+            <a href="tel:8 800 707 27 30" class="ms-auto">
+              <img
+                src="images/main-page/icons/mob-phone-call.svg"
+                alt=""
+                class="header__call"
+              />
+            </a>
           </div>
           <!-- MENU -->
           <nav class="nav menu">
@@ -56,7 +58,7 @@
             </a>
           </div>
 
-          <div class="header__contact" id="contact">
+          <a href="tel:8 800 707 27 30" class="header__contact" id="contact">
             <img
               src="images/main-page/icons/mob-phone-call.svg"
               alt=""
@@ -71,7 +73,7 @@
               />
               Обратный звонок
             </p>
-          </div>
+          </a>
         </div>
       </section>
     </header>
@@ -140,21 +142,22 @@
                 type="text"
                 class="float-form__input"
                 id="phone"
-                value="Телефон"
+                placeholder="Телефон"
+                onkeypress="noDigits(event)"
                 required
               />
               <input
                 type="text"
                 class="float-form__input"
                 id="name"
-                value="Имя"
+                placeholder="Имя"
                 required
               />
               <input
                 type="text"
                 class="float-form__input"
                 id="comment"
-                value="Комментарий"
+                placeholder="Комментарий"
                 required
               />
 
@@ -467,13 +470,13 @@
             />
             <nav class="nav footer_nav" id="footer_nav">
               <div class="footer__nav_mob">
-                <a class="footer-link" href="#">О компании</a>
-                <a class="footer-link" href="#">Продукция</a>
-                <a class="footer-link" href="#">Бренды</a>
+                <a class="footer-link" href="company.html">О компании</a>
+                <a class="footer-link" href="brend-series.html">Продукция</a>
+                <a class="footer-link" href="allbrands.html">Бренды</a>
               </div>
               <div class="footer__nav_mob">
-                <a class="footer-link" href="#">Сотрудничество</a>
-                <a class="footer-link" href="#">Контакты</a>
+                <a class="footer-link" href="clients.html">Сотрудничество</a>
+                <a class="footer-link" href="contacts.html">Контакты</a>
               </div>
             </nav>
             <div class="menu-icons menu-icons_footer" id="footer_icons">
@@ -493,7 +496,9 @@
                 alt=""
                 class="footer_call"
               />
-              <p class="footer-number white">8 800 707 27 30</p>
+              <a href="tel:8 800 707 27 30" class="footer-number white"
+                >8 800 707 27 30
+              </a>
               <br />
             </div>
           </div>

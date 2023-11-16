@@ -29,11 +29,13 @@
             <a href="index.html"
               ><img src="images/main-page/logo-white.svg" alt="" class="logo"
             /></a>
-            <img
-              src="images/main-page/icons/mob-phone-call.svg"
-              alt=""
-              class="header__call"
-            />
+            <a href="tel:8 800 707 27 30" class="ms-auto">
+              <img
+                src="images/main-page/icons/mob-phone-call.svg"
+                alt=""
+                class="header__call"
+              />
+            </a>
           </div>
           <!-- MENU -->
           <nav class="nav menu">
@@ -56,7 +58,7 @@
             </a>
           </div>
 
-          <div class="header__contact" id="contact">
+          <a href="tel:8 800 707 27 30" class="header__contact" id="contact">
             <img
               src="images/main-page/icons/mob-phone-call.svg"
               alt=""
@@ -71,7 +73,7 @@
               />
               Обратный звонок
             </p>
-          </div>
+          </a>
         </div>
       </section>
     </header>
@@ -81,7 +83,7 @@
       <section class="section section_uptitle section_contact">
         <div class="container container_map">
           <h1 class="big-title title_cont">Контакты</h1>
-          <p class="text series__banner__text">
+          <p class="text contacts__text">
             Пишите на почту или звоните нам, обязательно ответим или
             перезвоним.<br />
             Также приглашаем вас в наш уютный офис.
@@ -108,7 +110,9 @@
               />
               <div class="text-sm-center">
                 <h4 class="uptitle__aside__subtitle">Отдел продаж</h4>
-                <p class="text text-under">sales@triom.biz</p>
+                <a href="mailto:sales@triom.biz" class="text text-under"
+                  >sales@triom.biz</a
+                >
               </div>
             </div>
             <div class="col map__col">
@@ -119,7 +123,11 @@
               />
               <div class="text-sm-center">
                 <h4 class="uptitle__aside__subtitle">Отдел закупки</h4>
-                <p class="text text-under">a.kryshalovich@triom.biz</p>
+                <a
+                  href="mailto:a.kryshalovich@triom.biz"
+                  class="text text-under"
+                  >a.kryshalovich@triom.biz</a
+                >
               </div>
             </div>
             <div class="col map__col">
@@ -180,6 +188,7 @@
                     name="tel"
                     id="tel"
                     placeholder="Телефон"
+                    onkeypress="noDigits(event)"
                   />
                 </div>
               </div>
@@ -254,13 +263,13 @@
             />
             <nav class="nav footer_nav" id="footer_nav">
               <div class="footer__nav_mob">
-                <a class="footer-link" href="#">О компании</a>
-                <a class="footer-link" href="#">Продукция</a>
-                <a class="footer-link" href="#">Бренды</a>
+                <a class="footer-link" href="company.html">О компании</a>
+                <a class="footer-link" href="brend-series.html">Продукция</a>
+                <a class="footer-link" href="allbrands.html">Бренды</a>
               </div>
               <div class="footer__nav_mob">
-                <a class="footer-link" href="#">Сотрудничество</a>
-                <a class="footer-link" href="#">Контакты</a>
+                <a class="footer-link" href="clients.html">Сотрудничество</a>
+                <a class="footer-link" href="contacts.html">Контакты</a>
               </div>
             </nav>
             <div class="menu-icons menu-icons_footer" id="footer_icons">
@@ -280,7 +289,9 @@
                 alt=""
                 class="footer_call"
               />
-              <p class="footer-number white">8 800 707 27 30</p>
+              <a href="tel:8 800 707 27 30" class="footer-number white"
+                >8 800 707 27 30
+              </a>
               <br />
             </div>
           </div>

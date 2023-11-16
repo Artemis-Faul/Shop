@@ -18,49 +18,56 @@
     <link rel="stylesheet" href="css/main-page.css" />
     <link rel="stylesheet" href="css/mobile.css" />
 
-    <!-- <script src="js/swiper-bundle.min.js"></script> -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <!-- * {
-  background: #000 !important;
-  color: #0f0 !important;
-  outline: solid #f00 1px !important;
-} -->
     <header>
       <section class="section header header_main">
-        <div class="container d-flex align-items-center">
-          <img src="images/main-page/logo-white.svg" alt="" class="logo" />
-          <nav class="nav">
-            <a class="nav-link white" href="#">О компании</a>
-            <a class="nav-link white" href="#">Продукция</a>
-            <a class="nav-link white" href="#">Бренды</a>
-            <a class="nav-link white" href="clients.html">Сотрудничество</a>
-            <a class="nav-link white" href="#">Контакты</a>
-          </nav>
-          <div class="menu-icons">
-            <img
-              src="images/main-page/icons/instagram_white.svg"
-              alt=""
-              class="menu-icon"
-            />
-            <img
-              src="images/main-page/icons/telegram_white.svg"
-              alt=""
-              class="menu-icon"
-            />
-            <img
-              src="images/main-page/icons/email_white.svg"
-              alt=""
-              class="menu-icon"
-            />
+        <div class="container container_head">
+          <!-- Mobile view-->
+          <div class="mobile-menu">
+            <input class="side-menu" type="checkbox" id="side-menu" />
+            <label class="hamb" for="side-menu"
+              ><span class="hamb-line"></span
+            ></label>
+            <a href="index.html"
+              ><img src="images/main-page/logo-white.svg" alt="" class="logo" />
+            </a>
+            <a href="tel:8 800 707 27 30" class="ms-auto">
+              <img
+                src="images/main-page/icons/mob-phone-call.svg"
+                alt=""
+                class="header__call"
+              />
+            </a>
           </div>
-          <div class="header__contact">
+          <!-- MENU -->
+          <nav class="nav menu">
+            <a class="nav-link white" href="company.html">О компании</a>
+            <a class="nav-link white" href="brend-series.html">Продукция</a>
+            <a class="nav-link white" href="allbrands.html">Бренды</a>
+            <a class="nav-link white" href="clients.html">Сотрудничество</a>
+            <a class="nav-link white" href="contacts.html">Контакты</a>
+          </nav>
+
+          <div class="menu-icons" id="menu">
+            <a href="" class="menu-icon">
+              <img src="images/main-page/icons/instagram_white.svg" alt="" />
+            </a>
+            <a href="" class="menu-icon">
+              <img src="images/main-page/icons/telegram_white.svg" alt="" />
+            </a>
+            <a href="" class="menu-icon">
+              <img src="images/main-page/icons/email_white.svg" alt="" />
+            </a>
+          </div>
+
+          <a href="tel:8 800 707 27 30" class="header__contact" id="contact">
+            <img
+              src="images/main-page/icons/mob-phone-call.svg"
+              alt=""
+              class="hide_call"
+            />
             <p class="number white">8 800 707 27 30</p>
             <p class="header__contact__text">
               <img
@@ -70,7 +77,7 @@
               />
               Обратный звонок
             </p>
-          </div>
+          </a>
         </div>
       </section>
     </header>
@@ -127,21 +134,22 @@
                 type="text"
                 class="float-form__input"
                 id="phone"
-                value="Телефон"
+                placeholder="Телефон"
+                onkeypress="noDigits(event)"
                 required
               />
               <input
                 type="text"
                 class="float-form__input"
                 id="name"
-                value="Имя"
+                placeholder="Имя"
                 required
               />
               <input
                 type="text"
                 class="float-form__input"
                 id="comment"
-                value="Комментарий"
+                placeholder="Комментарий"
                 required
               />
 
@@ -171,7 +179,7 @@
                 электронные сигареты, а также расходные материалы и аксессуары
                 для них.
               </p>
-              <p class="text content_sh" sh-name="text">
+              <p class="text content_sh mb-16" sh-name="text">
                 Наша компания – поставщик vape систем для крупных магазинов
                 России, стран СНГ и Европы, которые ведут успешный бизнес и
                 динамично развивается в узкопрофильной сфере. TRIOM является
@@ -179,12 +187,14 @@
                 «VOZOL», а так же одним из прямых импортеров - «SMOANT»,
                 «GEEKVAPE», «ELF BAR», «VAPORESSO», «JUSTFOG» и др.
               </p>
-              <div class="btn btn_sh" btn-name="text">
-                <span class="span_sh">Показать еще</span>
+              <div class="btn btn_sh" btn-name="text" sh-type="text">
+                <span class="span_sh">Читать еще</span>
               </div>
               <!-- <button class="btn btn_hs">Читать ещё</button> -->
             </div>
-            <div class="col-sm-5 d-flex justify-content-end">
+            <div
+              class="col-sm-5 d-flex justify-content-center justify-content-sm-end"
+            >
               <img
                 src="images/main-page/about-company.svg"
                 alt=""
@@ -203,7 +213,7 @@
             СОТРУДНИЧЕСТВО С <span class="special-word">TRIOM</span> – ЭТО
           </h2>
 
-          <div class="d-flex flex-column card__row">
+          <div class="d-flex flex-column card__row mb-16">
             <!-- ROW-1 -->
             <div class="row card__row">
               <div class="col card_three">
@@ -321,7 +331,7 @@
             </div>
           </div>
           <!-- MOBILE HIDE-SHOW -->
-          <div class="btn btn_sh" btn-name="cards">
+          <div class="btn btn_sh" btn-name="cards" sh-type="content">
             <span class="span_sh">Показать еще</span>
           </div>
         </div>
@@ -329,86 +339,78 @@
       <!-- COOPERATION -->
 
       <!-- PRODUCTS -->
-      <section class="section sect_prod">
+      <section class="section sect_prod" id="pdoducts">
         <div class="container swiper-container swiperProd">
           <h2 class="sect__title">ПРОДУКЦИЯ</h2>
           <div class="swiper-wrapper swiper-wrapper_prod">
             <!-- SLIDE 1 -->
-            <div class="swiper-slide prod__slide">
-              <a href="e-sigarets.html" class="prod__link">
-                <div class="slide__img-wrap">
-                  <img
-                    src="images/main-page/prod/e-sigarretes.svg"
-                    alt=""
-                    class="prod__slide__img"
-                  />
-                </div>
-                <div class="prod__card-body">
-                  <h4 class="prod__card__title">Электронные сигареты</h4>
-                  <p class="text card-text prod__card__text">
-                    MASKKING, ELFBAR, HQD и др.
-                  </p>
-                  <p href="" class="text prod__more">Подробнее</p>
-                </div>
-              </a>
-            </div>
+            <a href="e-sigarets.html" class="swiper-slide prod__link">
+              <div class="slide__img-wrap">
+                <img
+                  src="images/main-page/prod/e-sigarretes.svg"
+                  alt=""
+                  class="prod__slide__img"
+                />
+              </div>
+              <div class="prod__card-body">
+                <h4 class="prod__card__title">Электронные сигареты</h4>
+                <p class="text card-text prod__card__text">
+                  MASKKING, ELFBAR, HQD и др.
+                </p>
+                <p href="" class="text prod__more">Подробнее</p>
+              </div>
+            </a>
             <!-- SLIDE 2 -->
-            <div class="swiper-slide prod__slide">
-              <a href="" class="prod__link">
-                <div class="slide__img-wrap">
-                  <img
-                    src="images/main-page/prod/pod-systems.svg"
-                    alt=""
-                    class="prod__slide__img"
-                  />
-                </div>
-                <div class="prod__card-body">
-                  <h4 class="prod__card__title">POD системы</h4>
-                  <p class="text card-text prod__card__text">
-                    Geek Vape, Hyppe, Smoant и др.
-                  </p>
-                  <p href="" class="text prod__more">Подробнее</p>
-                </div>
-              </a>
-            </div>
+            <a href="" class="swiper-slide prod__link">
+              <div class="slide__img-wrap">
+                <img
+                  src="images/main-page/prod/pod-systems.svg"
+                  alt=""
+                  class="prod__slide__img"
+                />
+              </div>
+              <div class="prod__card-body">
+                <h4 class="prod__card__title" id="pod">POD системы</h4>
+                <p class="text card-text prod__card__text">
+                  Geek Vape, Hyppe, Smoant и др.
+                </p>
+                <p href="" class="text prod__more">Подробнее</p>
+              </div>
+            </a>
             <!-- SLIDE 3 -->
-            <div class="swiper-slide prod__slide">
-              <a href="" class="prod__link">
-                <div class="slide__img-wrap">
-                  <img
-                    src="images/main-page/prod/chewing-tobacco.svg"
-                    alt=""
-                    class="prod__slide__img"
-                  />
-                </div>
-                <div class="prod__card-body">
-                  <h4 class="prod__card__title">Жевательный табак</h4>
-                  <p class="text card-text prod__card__text">
-                    ALAXY, ARQ TOBACCO, ARQA и др.
-                  </p>
-                  <p href="" class="text prod__more">Подробнее</p>
-                </div>
-              </a>
-            </div>
+            <a href="" class="swiper-slide prod__link">
+              <div class="slide__img-wrap">
+                <img
+                  src="images/main-page/prod/chewing-tobacco.svg"
+                  alt=""
+                  class="prod__slide__img"
+                />
+              </div>
+              <div class="prod__card-body">
+                <h4 class="prod__card__title">Жевательный табак</h4>
+                <p class="text card-text prod__card__text">
+                  ALAXY, ARQ TOBACCO, ARQA и др.
+                </p>
+                <p href="" class="text prod__more">Подробнее</p>
+              </div>
+            </a>
             <!-- SLIDE 4 -->
-            <div class="swiper-slide prod__slide">
-              <a href="" class="prod__link">
-                <div class="slide__img-wrap">
-                  <img
-                    src="images/main-page/prod/vape-liquid.svg"
-                    alt=""
-                    class="prod__slide__img"
-                  />
-                </div>
-                <div class="prod__card-body">
-                  <h4 class="prod__card__title">Жидкости для испарителей</h4>
-                  <p class="text card-text prod__card__text">
-                    ALAXY, Boshki, HUSKY и др.
-                  </p>
-                  <p href="" class="text prod__more">Подробнее</p>
-                </div>
-              </a>
-            </div>
+            <a href="" class="swiper-slide prod__link">
+              <div class="slide__img-wrap">
+                <img
+                  src="images/main-page/prod/vape-liquid.svg"
+                  alt=""
+                  class="prod__slide__img"
+                />
+              </div>
+              <div class="prod__card-body">
+                <h4 class="prod__card__title">Жидкости для испарителей</h4>
+                <p class="text card-text prod__card__text">
+                  ALAXY, Boshki, HUSKY и др.
+                </p>
+                <p href="" class="text prod__more">Подробнее</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -416,9 +418,10 @@
 
       <!-- DISTRIBUTORS -->
       <section class="section sect_dist">
-        <h2 class="sect__title">МЫ ОФИЦИАЛЬНЫЕ ДИСТРИБЬЮТОРЫ</h2>
-        <div class="swiper swiperDistr">
-          <div class="swiper-wrapper swiper-wrapper_distr">
+        <div class="container_dist swiper">
+          <h2 class="sect__title">МЫ ОФИЦИАЛЬНЫЕ ДИСТРИБЬЮТОРЫ</h2>
+          <div class="swiper-wrapper">
+            <!-- SLIDE 1 -->
             <div class="dist__card swiper-slide">
               <a href="">
                 <img
@@ -437,95 +440,10 @@
                 />
               </a>
             </div>
-            <div class="dist__card card_color swiper-slide">
-              <a href="">
-                <img
-                  src="images/main-page/distr/vosol.png"
-                  alt=""
-                  class="dist__img"
-                />
-              </a>
-            </div>
-            <div class="dist__card swiper-slide">
-              <a href="">
-                <img
-                  src="images/main-page/distr/elfbar.png"
-                  alt=""
-                  class="dist__img"
-                />
-              </a>
-            </div>
             <div class="dist__card swiper-slide">
               <a href="">
                 <img
                   src="images/main-page/distr/smok.png"
-                  alt=""
-                  class="dist__img"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper swiperDistr">
-          <div class="swiper-wrapper swiper-wrapper_distr">
-            <div class="col dist__card card_color swiper-slide">
-              <a href="">
-                <img
-                  src="images/main-page/distr/chiken.png"
-                  alt=""
-                  class="dist__img"
-                />
-              </a>
-            </div>
-            <div class="col dist__card swiper-slide">
-              <a href="">
-                <img
-                  src="images/main-page/distr/vooppo.png"
-                  alt=""
-                  class="dist__img"
-                />
-              </a>
-            </div>
-            <div class="col dist__card swiper-slide">
-              <a href="">
-                <img
-                  src="images/main-page/distr/hqd.png"
-                  alt=""
-                  class="dist__img"
-                />
-              </a>
-            </div>
-            <div class="col dist__card swiper-slide">
-              <a href="">
-                <img
-                  src="images/main-page/distr/elmerk.png"
-                  alt=""
-                  class="dist__img"
-                />
-              </a>
-            </div>
-            <div class="col dist__card card_color swiper-slide">
-              <a href="">
-                <img
-                  src="images/main-page/distr/brusko.png"
-                  alt=""
-                  class="dist__img"
-                />
-              </a>
-            </div>
-            <div class="col dist__card swiper-slide">
-              <a href="">
-                <img
-                  src="images/main-page/distr/veefoo.png"
-                  alt=""
-                  class="dist__img"
-                />
-              </a>
-            </div>
-            <div class="col dist__card swiper-slide">
-              <a href="">
-                <img
-                  src="images/main-page/distr/veefoo.png"
                   alt=""
                   class="dist__img"
                 />
@@ -650,7 +568,7 @@
     </main>
 
     <footer>
-      <section class="section footer">
+      <section class="section footer footer_float">
         <div class="container d-flex flex-column">
           <div class="footer-menu">
             <img
@@ -658,38 +576,37 @@
               alt=""
               class="logo_white"
             />
-            <nav class="nav">
-              <a class="footer-link" href="#">О компании</a>
-              <a class="footer-link" href="#">Продукция</a>
-              <a class="footer-link" href="#">Бренды</a>
-              <a class="footer-link" href="#">Сотрудничество</a>
-              <a class="footer-link" href="#">Контакты</a>
+            <nav class="nav footer_nav" id="footer_nav">
+              <div class="footer__nav_mob">
+                <a class="footer-link" href="company.html">О компании</a>
+                <a class="footer-link" href="brend-series.html">Продукция</a>
+                <a class="footer-link" href="allbrands.html">Бренды</a>
+              </div>
+              <div class="footer__nav_mob">
+                <a class="footer-link" href="clients.html">Сотрудничество</a>
+                <a class="footer-link" href="contacts.html">Контакты</a>
+              </div>
             </nav>
-            <div class="menu-icons">
-              <a href="#">
-                <img
-                  src="images/main-page/icons/instagram_white.svg"
-                  alt=""
-                  class="menu-icon"
-                />
+            <div class="menu-icons menu-icons_footer" id="footer_icons">
+              <a href="" class="menu-icon">
+                <img src="images/main-page/icons/instagram_white.svg" alt="" />
               </a>
-              <a href="#">
-                <img
-                  src="images/main-page/icons/telegram_white.svg"
-                  alt=""
-                  class="menu-icon"
-                />
+              <a href="" class="menu-icon">
+                <img src="images/main-page/icons/telegram_white.svg" alt="" />
               </a>
-              <a href="#">
-                <img
-                  src="images/main-page/icons/email_white.svg"
-                  alt=""
-                  class="menu-icon"
-                />
+              <a href="" class="menu-icon">
+                <img src="images/main-page/icons/email_white.svg" alt="" />
               </a>
             </div>
-            <div class="header__contact d-flex">
-              <p class="footer-number white">8 800 707 27 30</p>
+            <div class="header__contact d-flex" id="footer_contact">
+              <img
+                src="images/main-page/icons/mob-phone-call.svg"
+                alt=""
+                class="footer_call"
+              />
+              <a href="tel:8 800 707 27 30" class="footer-number white"
+                >8 800 707 27 30
+              </a>
               <br />
             </div>
           </div>

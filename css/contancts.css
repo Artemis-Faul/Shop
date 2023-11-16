@@ -8,10 +8,21 @@
   position: relative;
 }
 
+.contacts__text {
+  font-weight: 600;
+  font-size: 1.11rem;
+  margin-bottom: 24px;
+}
+
 .container_map {
   position: relative;
   z-index: 1;
 }
+
+.map__col a {
+  color: white;
+}
+
 .map-img {
   margin: 0;
 }

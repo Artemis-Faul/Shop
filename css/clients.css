@@ -12,15 +12,15 @@
 }
 
 .client__banner {
-  top: 52%;
+  top: 570px;
 }
 .uptitle__clients {
   margin-bottom: 48px;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1900px) {
   .client__banner {
-    top: 57.2%;
+    top: 530px;
     max-width: 63.5%;
   }
   .sect_cooperation_clients {
@@ -30,26 +30,27 @@
 
 @media (max-width: 1537px) {
   .client__banner {
-    top: 63.2%;
+    /* top: 63.2%; */
     max-width: 64.5%;
   }
 }
 @media (max-width: 1440px) {
   .client__banner {
-    top: 62.2%;
+    /* top: 62.2%; */
+    top: 570px;
     max-width: 61.5%;
   }
 }
 
 @media (max-width: 1367px) {
   .client__banner {
-    top: 74.2%;
+    /* top: 74.2%; */
     max-width: 62.5%;
   }
 }
 @media (max-width: 1280px) {
   .client__banner {
-    top: 54.2%;
+    /* top: 54.2%; */
   }
 }
 
